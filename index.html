@@ -242,6 +242,53 @@ body{font-size:20px!important;}
 .sb-circle{font-size:15px!important;}
 .sb-label{font-size:11.5px!important;}
 .site-footer,.site-footer p{font-size:15px!important;}
+
+/* ====== TOC 字卡 YouTube 講解徽章（v1）====== */
+.toc-card-wrap{position:relative;display:block;}
+.toc-card-wrap > .toc-card{padding-bottom:46px!important;}
+.toc-yt{
+  position:absolute;bottom:10px;right:10px;
+  display:inline-flex;align-items:center;gap:5px;
+  padding:6px 12px;border-radius:16px;
+  background:rgba(255,0,0,0.08);color:#c8001a;
+  font-family:"Noto Sans TC",sans-serif;font-size:12px;
+  font-weight:600;letter-spacing:1.5px;text-decoration:none;
+  transition:all 0.22s ease;z-index:5;line-height:1;
+  border:1px solid rgba(200,0,26,0.22);
+  white-space:nowrap;
+}
+.toc-yt:hover{
+  background:#ff0000;color:#fff;border-color:#ff0000;
+  box-shadow:0 4px 14px rgba(255,0,0,0.28);
+  transform:translateY(-1px);
+}
+.toc-yt-icon{width:18px;height:13px;flex-shrink:0;display:block;}
+@media(max-width:600px){
+  .toc-yt{padding:5px 10px;font-size:11px;}
+  .toc-yt-icon{width:16px;height:11px;}
+}
+
+/* ====== 側欄外部連結 + divider（v1）====== */
+.sb-divider{width:60%;height:1px;margin:16px auto 10px;
+  background:linear-gradient(90deg,transparent,rgba(212,196,168,.5),transparent);}
+.sb-ext{opacity:.92;}
+.sb-ext .sb-circle{
+  background:rgba(184,134,11,.14);
+  border:1px solid rgba(184,134,11,.5);
+  color:var(--goldL);
+  font-size:18px;font-weight:400;
+}
+.sb-ext:hover{opacity:1;background:rgba(184,134,11,.16);}
+.sb-ext:hover .sb-circle{
+  background:var(--accent);
+  border-color:var(--accentL);
+  color:#fff;
+  box-shadow:0 0 10px rgba(184,134,11,.4);
+}
+.sb-ext .sb-label{
+  font-size:10.5px;letter-spacing:2px;
+  color:var(--goldL);opacity:.95;
+}
 </style>
 <meta content="v2-silent" name="wy-full-protection"/>
 <meta content="noai,noimageai,noarchive,noindex" name="robots"/>
@@ -330,32 +377,33 @@ body{font-size:20px!important;}
   });
 })();
 </script>
-<meta content="《大智度論》卷一 1-15 品完整彙整本：龍樹菩薩造、鳩摩羅什譯，釋摩訶般若波羅蜜經初品。內含僧叡序、緣起義、摩訶般若波羅蜜經之大因緣、四悉檀判教、對治悉檀、第一義悉檀與諸法實相、為長爪梵志說般若、般若無諍品，以及逐字解構「如是我聞一時」六成就之中觀辯證。" name="description"/><meta content="大智度論,大智度論卷一,龍樹菩薩,鳩摩羅什,摩訶般若波羅蜜經,般若波羅蜜,般若中觀,中觀邏輯,四悉檀,世界悉檀,各各為人悉檀,對治悉檀,第一義悉檀,諸法實相,僧叡釋論序,緣起義,中論八不偈,如是我聞一時,六成就,長爪梵志,般若無諍,中道,空性,佛經彙整,佛學閱讀本" name="keywords"/><meta content="鄭威文" name="author"/><link href="https://weiwen0925.github.io/dazhidulun-1/" rel="canonical"/><meta content="大智度論 · 卷一 · 1-15 品彙整本" property="og:title"/><meta content="article" property="og:type"/><meta content="https://weiwen0925.github.io/dazhidulun-1/" property="og:url"/><meta content="《大智度論》卷一 1-15 品完整彙整本：龍樹菩薩造、鳩摩羅什譯，釋摩訶般若波羅蜜經初品。內含僧叡序、緣起義、摩訶般若波羅蜜經之大因緣、四悉檀判教、對治悉檀、第一義悉檀與諸法實相、為長爪梵志說般若、般若無諍品，以及逐字解構「如是我聞一時」六成就之中觀辯證。" property="og:description"/><meta content="zh_TW" property="og:locale"/><meta content="智論 · 中觀經論閱讀本" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="大智度論 · 卷一 · 1-15 品彙整本" name="twitter:title"/><meta content="《大智度論》卷一 1-15 品完整彙整本：龍樹菩薩造、鳩摩羅什譯，釋摩訶般若波羅蜜經初品。內含僧叡序、緣起義、摩訶般若波羅蜜經之大因緣、四悉檀判教、對治悉檀、第一義悉檀與諸法實相、為長爪梵志說般若、般若無諍品，以及逐字解構「如是我聞一時」六成就之中觀辯證。" name="twitter:description"/><meta content="zh-Hant" http-equiv="Content-Language"/><meta name="wy-seo-anchors" content="v1">
+<meta content="《大智度論》卷一 1-15 品完整彙整本：龍樹菩薩造、鳩摩羅什譯，釋摩訶般若波羅蜜經初品。內含僧叡序、緣起義、摩訶般若波羅蜜經之大因緣、四悉檀判教、對治悉檀、第一義悉檀與諸法實相、為長爪梵志說般若、般若無諍品，以及逐字解構「如是我聞一時」六成就之中觀辯證。" name="description"/><meta content="大智度論,大智度論卷一,龍樹菩薩,鳩摩羅什,摩訶般若波羅蜜經,般若波羅蜜,般若中觀,中觀邏輯,四悉檀,世界悉檀,各各為人悉檀,對治悉檀,第一義悉檀,諸法實相,僧叡釋論序,緣起義,中論八不偈,如是我聞一時,六成就,長爪梵志,般若無諍,中道,空性,佛經彙整,佛學閱讀本" name="keywords"/><meta content="鄭威文" name="author"/><link href="https://weiwen0925.github.io/dazhidulun-1/" rel="canonical"/><meta content="大智度論 · 卷一 · 1-15 品彙整本" property="og:title"/><meta content="article" property="og:type"/><meta content="https://weiwen0925.github.io/dazhidulun-1/" property="og:url"/><meta content="《大智度論》卷一 1-15 品完整彙整本：龍樹菩薩造、鳩摩羅什譯，釋摩訶般若波羅蜜經初品。內含僧叡序、緣起義、摩訶般若波羅蜜經之大因緣、四悉檀判教、對治悉檀、第一義悉檀與諸法實相、為長爪梵志說般若、般若無諍品，以及逐字解構「如是我聞一時」六成就之中觀辯證。" property="og:description"/><meta content="zh_TW" property="og:locale"/><meta content="智論 · 中觀經論閱讀本" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="大智度論 · 卷一 · 1-15 品彙整本" name="twitter:title"/><meta content="《大智度論》卷一 1-15 品完整彙整本：龍樹菩薩造、鳩摩羅什譯，釋摩訶般若波羅蜜經初品。內含僧叡序、緣起義、摩訶般若波羅蜜經之大因緣、四悉檀判教、對治悉檀、第一義悉檀與諸法實相、為長爪梵志說般若、般若無諍品，以及逐字解構「如是我聞一時」六成就之中觀辯證。" name="twitter:description"/><meta content="zh-Hant" http-equiv="Content-Language"/><meta content="v1" name="wy-seo-anchors"/>
+<meta content="v1" name="wy-toc-yt"/>
+<meta name="wy-sb-extlinks" content="v1">
 </head>
 <body oncontextmenu="return false" oncopy="return false" oncut="return false" ondragstart="return false" onselectstart="return false">
-<div style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);left:-9999px;" aria-hidden="true">
-  <h1>大智度論 · 卷一 · 1-15 品 彙 整 閱 讀 本</h1>
-  <p>《大智度論》卷一 1-15 品完整彙整本：龍樹菩薩造、鳩摩羅什譯，釋摩訶般若波羅蜜經初品。內含僧叡序、緣起義、摩訶般若波羅蜜經之大因緣、四悉檀判教、對治悉檀、第一義悉檀與諸法實相、為長爪梵志說般若、般若無諍品，以及逐字解構「如是我聞一時」六成就之中觀辯證。</p>
-  <p>本卷十五品目錄：</p>
-  <ol>
-    <li>僧叡釋論序</li>
-    <li>緣起義釋論第一</li>
-    <li>摩訶般若波羅蜜經之大因緣</li>
-    <li>四悉檀 · 般若波羅蜜判教邏輯</li>
-    <li>釋初品中四悉檀義</li>
-    <li>中觀邏輯與對治悉檀</li>
-    <li>越過無常 · 對治悉檀辯證</li>
-    <li>第一義悉檀與諸法實相</li>
-    <li>為長爪梵志大論議師說般若品</li>
-    <li>般若無諍品</li>
-    <li>如是義</li>
-    <li>釋「我」義</li>
-    <li>釋「聞」義 · 耳根圓通</li>
-    <li>俗語一時之辯</li>
-    <li>釋初品「一時」義</li>
-  </ol>
+<div aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);left:-9999px;">
+<h1>大智度論 · 卷一 · 1-15 品 彙 整 閱 讀 本</h1>
+<p>《大智度論》卷一 1-15 品完整彙整本：龍樹菩薩造、鳩摩羅什譯，釋摩訶般若波羅蜜經初品。內含僧叡序、緣起義、摩訶般若波羅蜜經之大因緣、四悉檀判教、對治悉檀、第一義悉檀與諸法實相、為長爪梵志說般若、般若無諍品，以及逐字解構「如是我聞一時」六成就之中觀辯證。</p>
+<p>本卷十五品目錄：</p>
+<ol>
+<li>僧叡釋論序</li>
+<li>緣起義釋論第一</li>
+<li>摩訶般若波羅蜜經之大因緣</li>
+<li>四悉檀 · 般若波羅蜜判教邏輯</li>
+<li>釋初品中四悉檀義</li>
+<li>中觀邏輯與對治悉檀</li>
+<li>越過無常 · 對治悉檀辯證</li>
+<li>第一義悉檀與諸法實相</li>
+<li>為長爪梵志大論議師說般若品</li>
+<li>般若無諍品</li>
+<li>如是義</li>
+<li>釋「我」義</li>
+<li>釋「聞」義 · 耳根圓通</li>
+<li>俗語一時之辯</li>
+<li>釋初品「一時」義</li>
+</ol>
 </div>
-
 <a id="top" style="position:absolute;top:0;left:0;width:1px;height:1px;overflow:hidden;"></a>
 <button aria-label="開合側欄" id="sbToggle">☰</button>
 <div class="read-progress" id="readProgress">
@@ -385,7 +433,7 @@ body{font-size:20px!important;}
 <a class="sb-item" data-ch="13" href="#chapter-13"><span class="sb-circle">十三</span><span class="sb-label" data-wytext="nv6mjODkj9fN"></span></a>
 <a class="sb-item" data-ch="14" href="#chapter-14"><span class="sb-circle">十四</span><span class="sb-label" data-wytext="k8Gtgvj4jNDvndLa"></span></a>
 <a class="sb-item" data-ch="15" href="#chapter-15"><span class="sb-circle">十五</span><span class="sb-label" data-wytext="k8Gtgvj4j9fN"></span></a>
-</nav>
+<div class="sb-divider"></div><a class="sb-item sb-ext" href="https://weiwen0925.github.io/dazhidulun-2/" rel="noopener" target="_blank" title="卷二 · 大智度論"><span class="sb-circle">↗</span><span class="sb-label" data-wytext="kvSah+H6jNPo"></span></a><a class="sb-item sb-ext" href="https://weiwen0925.github.io/dazhidulun-0/" rel="noopener" target="_blank" title="大智度論 · 門面頁"><span class="sb-circle">✦</span><span class="sb-label" data-wytext="nu+th+H6gfTG"></span></a></nav>
 </aside>
 <main class="main">
 <div class="site-hero">
@@ -415,21 +463,21 @@ body{font-size:20px!important;}
 <h2 class="toc-title" data-wytext="kMGQRIbhxkmN+eg="></h2>
 <div class="toc-desc" data-wytext="kvSaRIXC6EmmwkxETgARHEMRkuqsRKPNSIzh3UyQ46wRycylV5y+5Q=="></div>
 <div class="toc-grid">
-<a class="toc-card" href="#chapter-1"><span class="toc-num" data-wytext="k8Gt"></span><span class="toc-name" data-wytext="kNWBgNn6jfrlVa7CTsiyipO+1pCq74nR/oze+g=="></span><span class="toc-sub" data-wytext="nv6mjMrsjNDvncHai42FyMy+ke+qjOn9jsTTkOPHi4Orycu8"></span></a>
-<a class="toc-card" href="#chapter-2"><span class="toc-num" data-wytext="k8Oh"></span><span class="toc-name" data-wytext="kNWBgNv2jfrlVa7CTsqGjp6EwJ6TzYj944HP44vZwsmJrQ=="></span><span class="toc-sub" data-wytext="kM6OjNTNjeTXksXPTu+GDZ+2/JGG8obWxI3c9Ynm78qJkJGHxg=="></span></a>
-<a class="toc-card" href="#chapter-3"><span class="toc-num" data-wytext="k8Gk"></span><span class="toc-name" data-wytext="kNWBgNnzjfrlVa7CTsughJ6ZwZGlyInxzY/X14vL68WtsZGH5J2U74Tez4z/1YvCzQ=="></span><span class="toc-sub" data-wytext="ksezg9bZgNzTncr+ipWcxPeiV7uaRIbM+43d/onRyciqjZGG1A=="></span></a>
-<a class="toc-card" href="#chapter-4"><span class="toc-num" data-wytext="kuK2"></span><span class="toc-name" data-wytext="kNWBgfrhjfrlVa7CTsiqtpCz/p+H5A=="></span><span class="toc-sub" data-wytext="n/GBjOrfjtrGktLwhrGtyuy1kvGJgvTjgevrndDahqW2yuqukOmrgv/Mjs7v"></span></a>
-<a class="toc-card" href="#chapter-5"><span class="toc-num" data-wytext="k8O5"></span><span class="toc-name" data-wytext="kNWBgNvujfrlVa7CTsS2ppO56py+5YXCxYz/7or358ubrZGP3g=="></span><span class="toc-sub" data-wytext="kuK2guPzjsPkneTyipe9xd2XkOOpjN/VgMTtVa7CTsqHvpO0z5Cv64nGx4777ovu0MqrqZ6W1J6P2A=="></span></a>
-<a class="toc-card" href="#chapter-6"><span class="toc-num" data-wytext="kvyA"></span><span class="toc-name" data-wytext="kNWBgeTXjfrlVa7CTsmJgJ6W95Cv64nGx4Hs8onF48uDlpCz/p+H5A=="></span><span class="toc-sub" data-wytext="kf6kg/b/gOHjnfvQTu+GDZOB+p+f34f44Y/O9Yvv6sqDk5CL4ZyXwg=="></span></a>
-<a class="toc-card" href="#chapter-7"><span class="toc-num" data-wytext="k8Gu"></span><span class="toc-name" data-wytext="kNWBgNn5jfrlVa7CTsWHp5+w+Z6pxYTC0A=="></span><span class="toc-sub" data-wytext="ksmggtPBjuvtk8b1hqW2yc6cn96tjeP1gNXLkvbxhpOexdu4"></span></a>
-<a class="toc-card" href="#chapter-8"><span class="toc-num" data-wytext="kvyG"></span><span class="toc-name" data-wytext="kNWBgeTRjfrlVa7CTsqdgZKJ956TzYf44Y/O9YT96cWalZCC4pyCwobh0A=="></span><span class="toc-sub" data-wytext="kuaXgvfGi+nukMjSiLSLyMyXn9K7h+HxgOHjluz/ipWcxd2nlPmmg/v+gevrndDahoqSy9G6"></span></a>
-<a class="toc-card" href="#chapter-9"><span class="toc-num" data-wytext="k8Cw"></span><span class="toc-name" data-wytext="kNWBgNjnjfrlVa7CTsqzl5+kwJ6lzofY3Yzb4onRycWau56cx5yVz4nQwoHs2YT+y8iirA=="></span><span class="toc-sub" data-wytext="kNCXguHdj/PgndLahoC4DbSGV5C404bywo/GwInK+cW5qpKM7JC05Ibg7IDm+oTJwciBoJCAzQ=="></span></a>
-<a class="toc-card" href="#chapter-10"><span class="toc-num" data-wytext="kvSs"></span><span class="toc-name" data-wytext="kNWBgez7jfrlVa7CTsW5gZ660p6pxYnR5Yz39A=="></span><span class="toc-sub" data-wytext="ksezh+H2jdnpk97Oja28yP6BlPmhg+XbjuDkkNLija28yuy1k8GAjMb6gevrndDa"></span></a>
-<a class="toc-card" href="#chapter-11"><span class="toc-num" data-wytext="kvSsgNn6"></span><span class="toc-name" data-wytext="kNWBgez7jNHkkP/0Tu+GDZOX9Z+1y4bEwQ=="></span><span class="toc-sub" data-wytext="ksezh+H2jNbFluz4i6iUzva9kP2MjMr3i+npkvbxipWcxdGxnvuijN3VgM7Hk8v+"></span></a>
-<a class="toc-card" href="#chapter-12"><span class="toc-num" data-wytext="kvSsgNv2"></span><span class="toc-name" data-wytext="kNWBgez7jNPokP/0Tu+GDZ+2/Jqt6Ify+Yrk+IvLxw=="></span><span class="toc-sub" data-wytext="k8Gtgen9jtrxksXPTltCDZOX9Z+1y4fy+YHl64vv6sSqtJ+2+pGTy4nX4Q=="></span></a>
-<a class="toc-card" href="#chapter-13"><span class="toc-num" data-wytext="kvSsgNnz"></span><span class="toc-name" data-wytext="kNWBgez7jNHtkP/0Tu+GDZ+2/Jqt6In79ork+IvLxw3zmlbZ98rLxNif9PqN9fad5qrZhs7XxOzI/8Gd38qD4fOT1ajZhuA="></span><span class="toc-sub" data-wytext="k8GAjMb6gevrndDahoqSy+ihlPmngcXdjvDekNbThoanzva6kvSagNv2jNDvluz5hqyvzva8"></span></a>
-<a class="toc-card" href="#chapter-14"><span class="toc-num" data-wytext="kvSsgfrh"></span><span class="toc-name" data-wytext="kNWBgez7jfL/kP/0Tu+GDZKO4JGH+oXC6I/994jM5cWPgg=="></span><span class="toc-sub" data-wytext="keyVgtLvgOHjkuXciK2Wyc+6kNCbgsTPSKvTVYXy5c6xoZKJ95qt6Q=="></span></a>
-<a class="toc-card" href="#chapter-15"><span class="toc-num" data-wytext="kvSsgNvu"></span><span class="toc-name" data-wytext="kNWBgez7jNPwkP/0Tu+GDZ+2/Jyl+YTp6Yrk+YjN7suor5Wx+p6TzQ=="></span><span class="toc-sub" data-wytext="keCvjffpj/PgkO3yi728xf62ktaLg/rC"></span></a>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-1"><span class="toc-num" data-wytext="k8Gt"></span><span class="toc-name" data-wytext="kNWBgNn6jfrlVa7CTsiyipO+1pCq74nR/oze+g=="></span><span class="toc-sub" data-wytext="nv6mjMrsjNDvncHai42FyMy+ke+qjOn9jsTTkOPHi4Orycu8"></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/McfSga3hY1I" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第1品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-2"><span class="toc-num" data-wytext="k8Oh"></span><span class="toc-name" data-wytext="kNWBgNv2jfrlVa7CTsqGjp6EwJ6TzYj944HP44vZwsmJrQ=="></span><span class="toc-sub" data-wytext="kM6OjNTNjeTXksXPTu+GDZ+2/JGG8obWxI3c9Ynm78qJkJGHxg=="></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/SYReALAlEc4" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第2品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-3"><span class="toc-num" data-wytext="k8Gk"></span><span class="toc-name" data-wytext="kNWBgNnzjfrlVa7CTsughJ6ZwZGlyInxzY/X14vL68WtsZGH5J2U74Tez4z/1YvCzQ=="></span><span class="toc-sub" data-wytext="ksezg9bZgNzTncr+ipWcxPeiV7uaRIbM+43d/onRyciqjZGG1A=="></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/gInemwDJZfc" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第3品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-4"><span class="toc-num" data-wytext="kuK2"></span><span class="toc-name" data-wytext="kNWBgfrhjfrlVa7CTsiqtpCz/p+H5A=="></span><span class="toc-sub" data-wytext="n/GBjOrfjtrGktLwhrGtyuy1kvGJgvTjgevrndDahqW2yuqukOmrgv/Mjs7v"></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/MxTvfz9FD70" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第4品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-5"><span class="toc-num" data-wytext="k8O5"></span><span class="toc-name" data-wytext="kNWBgNvujfrlVa7CTsS2ppO56py+5YXCxYz/7or358ubrZGP3g=="></span><span class="toc-sub" data-wytext="kuK2guPzjsPkneTyipe9xd2XkOOpjN/VgMTtVa7CTsqHvpO0z5Cv64nGx4777ovu0MqrqZ6W1J6P2A=="></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/7M7bks0v-mQ" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第5品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-6"><span class="toc-num" data-wytext="kvyA"></span><span class="toc-name" data-wytext="kNWBgeTXjfrlVa7CTsmJgJ6W95Cv64nGx4Hs8onF48uDlpCz/p+H5A=="></span><span class="toc-sub" data-wytext="kf6kg/b/gOHjnfvQTu+GDZOB+p+f34f44Y/O9Yvv6sqDk5CL4ZyXwg=="></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/qzDBi61qR_s" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第6品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-7"><span class="toc-num" data-wytext="k8Gu"></span><span class="toc-name" data-wytext="kNWBgNn5jfrlVa7CTsWHp5+w+Z6pxYTC0A=="></span><span class="toc-sub" data-wytext="ksmggtPBjuvtk8b1hqW2yc6cn96tjeP1gNXLkvbxhpOexdu4"></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/YXiRPNyHVE4" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第7品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-8"><span class="toc-num" data-wytext="kvyG"></span><span class="toc-name" data-wytext="kNWBgeTRjfrlVa7CTsqdgZKJ956TzYf44Y/O9YT96cWalZCC4pyCwobh0A=="></span><span class="toc-sub" data-wytext="kuaXgvfGi+nukMjSiLSLyMyXn9K7h+HxgOHjluz/ipWcxd2nlPmmg/v+gevrndDahoqSy9G6"></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/52PuLXgH4Pk" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第8品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-9"><span class="toc-num" data-wytext="k8Cw"></span><span class="toc-name" data-wytext="kNWBgNjnjfrlVa7CTsqzl5+kwJ6lzofY3Yzb4onRycWau56cx5yVz4nQwoHs2YT+y8iirA=="></span><span class="toc-sub" data-wytext="kNCXguHdj/PgndLahoC4DbSGV5C404bywo/GwInK+cW5qpKM7JC05Ibg7IDm+oTJwciBoJCAzQ=="></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/pTXQbPZqPHk" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第9品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-10"><span class="toc-num" data-wytext="kvSs"></span><span class="toc-name" data-wytext="kNWBgez7jfrlVa7CTsW5gZ660p6pxYnR5Yz39A=="></span><span class="toc-sub" data-wytext="ksezh+H2jdnpk97Oja28yP6BlPmhg+XbjuDkkNLija28yuy1k8GAjMb6gevrndDa"></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/aYOOvs8Y7XE" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第10品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-11"><span class="toc-num" data-wytext="kvSsgNn6"></span><span class="toc-name" data-wytext="kNWBgez7jNHkkP/0Tu+GDZOX9Z+1y4bEwQ=="></span><span class="toc-sub" data-wytext="ksezh+H2jNbFluz4i6iUzva9kP2MjMr3i+npkvbxipWcxdGxnvuijN3VgM7Hk8v+"></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/kC7MQPaVnAA" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第11品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-12"><span class="toc-num" data-wytext="kvSsgNv2"></span><span class="toc-name" data-wytext="kNWBgez7jNPokP/0Tu+GDZ+2/Jqt6Ify+Yrk+IvLxw=="></span><span class="toc-sub" data-wytext="k8Gtgen9jtrxksXPTltCDZOX9Z+1y4fy+YHl64vv6sSqtJ+2+pGTy4nX4Q=="></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/JPP-8SPYvSM" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第12品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-13"><span class="toc-num" data-wytext="kvSsgNnz"></span><span class="toc-name" data-wytext="kNWBgez7jNHtkP/0Tu+GDZ+2/Jqt6In79ork+IvLxw3zmlbZ98rLxNif9PqN9fad5qrZhs7XxOzI/8Gd38qD4fOT1ajZhuA="></span><span class="toc-sub" data-wytext="k8GAjMb6gevrndDahoqSy+ihlPmngcXdjvDekNbThoanzva6kvSagNv2jNDvluz5hqyvzva8"></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/Xuwc4rTHwMs" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第13品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-14"><span class="toc-num" data-wytext="kvSsgfrh"></span><span class="toc-name" data-wytext="kNWBgez7jfL/kP/0Tu+GDZKO4JGH+oXC6I/994jM5cWPgg=="></span><span class="toc-sub" data-wytext="keyVgtLvgOHjkuXciK2Wyc+6kNCbgsTPSKvTVYXy5c6xoZKJ95qt6Q=="></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/dFrSZi5r8Co" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第14品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
+<div class="toc-card-wrap"><a class="toc-card" href="#chapter-15"><span class="toc-num" data-wytext="kvSsgNvu"></span><span class="toc-name" data-wytext="kNWBgez7jNPwkP/0Tu+GDZ+2/Jyl+YTp6Yrk+YjN7suor5Wx+p6TzQ=="></span><span class="toc-sub" data-wytext="keCvjffpj/PgkO3yi728xf62ktaLg/rC"></span></a><a aria-label="YouTube 講解" class="toc-yt" href="https://youtu.be/Yfng7V0VW5U" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="第15品 YouTube 講解"><svg aria-hidden="true" class="toc-yt-icon" fill="currentColor" viewbox="0 0 24 17"><path d="M23.5 2.65a3 3 0 0 0-2.1-2.12C19.55 0 12 0 12 0S4.45 0 2.6.53A3 3 0 0 0 .5 2.65 31 31 0 0 0 0 8.5a31 31 0 0 0 .5 5.85 3 3 0 0 0 2.1 2.12C4.45 17 12 17 12 17s7.55 0 9.4-.53a3 3 0 0 0 2.1-2.12A31 31 0 0 0 24 8.5a31 31 0 0 0-.5-5.85z"></path><polygon fill="#fff" points="9.6 12.15 16.18 8.5 9.6 4.85"></polygon></svg></a></div>
 </div>
 </div>
 <section class="chapter" id="chapter-1">
@@ -914,7 +962,6 @@ updateActive();
   });
 })();
 </script>
-
 <script id="wy-deeplink">
 (function(){
   // 解析 #chapter-N-M-K 格式：N=品, M=章, K=節（M 或 K 可省略）
@@ -972,7 +1019,6 @@ updateActive();
   });
 })();
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
