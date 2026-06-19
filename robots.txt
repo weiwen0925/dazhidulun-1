@@ -1,0 +1,41 @@
+# robots.txt · 大智度論 卷一彙整本
+# 允許 Google / Bing 等一般搜尋引擎索引主頁；封鎖 AI 訓練爬蟲
+
+User-agent: *
+Allow: /
+
+# 封鎖 AI 訓練爬蟲（與 <meta name="robots" content="noai"> 一致）
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+Sitemap: https://weiwen0925.github.io/dazhidulun-1/sitemap.xml
