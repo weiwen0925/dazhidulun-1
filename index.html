@@ -1211,5 +1211,812 @@ updateActive();
   });
 })();
 </script>
+<!--WY-C1P1:BEGIN-->
+<style id="wy-c1p1-css">
+.c1p1-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p1-fabbox.show{display:block;}
+.c1p1-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p1-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p1-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p1-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p1-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p1-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p1-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p1-modal.open{display:flex;}
+.c1p1-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p1-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p1-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p1-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p1-close:hover{background:#e3d5b8;}
+.c1p1-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p1-tbl th,.c1p1-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p1-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p1-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p1-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p1-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p1-fabbox{right:14px;}.c1p1-tbl{font-size:11.5px;}.c1p1-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p1-fabbox" id="c1p1Box"><button class="c1p1-btn" id="c1p1Btn" type="button" aria-label="開啟全景總表"><span class="c1p1-ic">&#9638;</span><span class="c1p1-ls"><span class="c1p1-l1">本品 &middot; 僧叡釋論序</span><span class="c1p1-l2">生者無生・開夷路辯實相</span></span></button></div><div class="c1p1-modal" id="c1p1Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p1-card"><button class="c1p1-close" id="c1p1Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第一品 僧叡釋論序 · 全景總表</h3><p class="sub">卷一・第1品｜全十二章｜本體・歷史・詮釋三重邏輯</p><table class="c1p1-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>序文背景與原典全文</td><td>僧叡為什門四聖之一，序文融鑄本體論、歷史論、翻譯論三重邏輯於千字之間</td><td>僧叡、淵鏡、大乘東傳第一文獻</td></tr><tr><td>第二章</td><td>本體論・生者無生</td><td>萬有本於生生而生，生者無生；無生無始即是物之性，中觀「不生不滅」之原型</td><td>生生、無生、無始、物之性</td></tr><tr><td>第三章</td><td>二諦之用・阿含與般若</td><td>阿含為之作，對治邪思之自起；般若為之照，對治滯有之由惑——深淺不同而非對立</td><td>邪思、滯有、為之作、為之照</td></tr><tr><td>第四章</td><td>語言與智力的極限</td><td>照本希夷、津涯浩汗；以言求之則乖其深，以智測之則失其旨</td><td>希夷、二乘顛沛、雜學曝鱗</td></tr><tr><td>第五章</td><td>傳承與時機・正像之別</td><td>馬鳴生於正法之餘，直振遺風即可；龍樹生於像法之末，須雙軌並行（假照龍宮＋寄跡凡夫）</td><td>正法、像法、假照龍宮、寄跡凡夫</td></tr><tr><td>第六章</td><td>論之功能・開夷路辯實相</td><td>開夷路令大乘方軌直入（外向引導）；辯實相令妄見不遠而自復（內向矯正）</td><td>夷路、方軌而直入、不遠而自復</td></tr><tr><td>第七章</td><td>結構美學・四象限</td><td>初標眾異以盡美，終舉無執以盡善；釋所不盡則立論明之，論其未辯則寄折中定之</td><td>盡美、盡善、折中</td></tr><tr><td>第八章</td><td>譯場風景・鳩摩羅什與逍遙園</td><td>秦弘始三年羅什抵長安，秦王與五百公卿共集渭濱逍遙園譯場</td><td>淵鏡、逍遙園、虛襟</td></tr><tr><td>第九章</td><td>翻譯的辯證・存真與通俗</td><td>梵本十萬偈、三百二十萬言，三分除二成百卷；三策略取中道「案譯而書，都不備飾」</td><td>停筆爭是、簡而便之、案譯而書</td></tr><tr><td>第十章</td><td>歷史評價與空間隱喻</td><td>智慧日已頹，斯人令再曜；嶮徑與夷路爭轍，非二匠孰能正之</td><td>嶮徑、夷路、功格十地</td></tr><tr><td>第十一章</td><td>翻譯作為中觀實踐</td><td>裁而略之即不滯於文、不失於理，是翻譯層的中道展現；三重邏輯總結收攏全篇</td><td>三重邏輯（本體/歷史/詮釋）</td></tr><tr><td>第十二章</td><td>結語・給讀者的省思</td><td>幸冀明悟之賢，略其文而挹其玄；五層夷路終匯為讀者自身的實踐之路</td><td>挹其玄、通往實相的夷路</td></tr></tbody></table><p class="c1p1-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p1-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p1Btn"),BOX=document.getElementById("c1p1Box"),MODAL=document.getElementById("c1p1Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=0;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p1Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P1:END-->
+
+<!--WY-C1P2:BEGIN-->
+<style id="wy-c1p2-css">
+.c1p2-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p2-fabbox.show{display:block;}
+.c1p2-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p2-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p2-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p2-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p2-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p2-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p2-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p2-modal.open{display:flex;}
+.c1p2-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p2-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p2-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p2-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p2-close:hover{background:#e3d5b8;}
+.c1p2-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p2-tbl th,.c1p2-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p2-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p2-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p2-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p2-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p2-fabbox{right:14px;}.c1p2-tbl{font-size:11.5px;}.c1p2-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p2-fabbox" id="c1p2Box"><button class="c1p2-btn" id="c1p2Btn" type="button" aria-label="開啟全景總表"><span class="c1p2-ic">&#9638;</span><span class="c1p2-ls"><span class="c1p2-l1">本品 &middot; 緣起義釋論第一</span><span class="c1p2-l2">佛法僧二諦・中觀全息圖</span></span></button></div><div class="c1p2-modal" id="c1p2Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p2-card"><button class="c1p2-close" id="c1p2Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第二品 緣起義釋論第一 · 全景總表</h3><p class="sub">卷一・第2品｜全七章｜龍樹禮敬偈二十四句・中觀全息圖</p><table class="c1p2-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>偈頌原典與結構總綱</td><td>龍樹禮敬偈二十四句以佛法僧三寶為經、二諦為緯，是中觀哲學的全息圖</td><td>全息圖、四段架構、傳遞鏈</td></tr><tr><td>第二章</td><td>禮敬佛</td><td>智度大道佛從來（覺悟因果）、智度大海佛窮盡（動靜悖論）、相義無礙、無等佛超越比較</td><td>從來、窮盡、無礙、無等</td></tr><tr><td>第三章</td><td>禮敬法</td><td>有無二見滅無餘、四句分別、諸法實相即無相、常住不壞（空性恆常）、淨煩惱、依法不依人</td><td>四句分別、實相無相、淨煩惱</td></tr><tr><td>第四章</td><td>禮敬僧</td><td>聖眾大海行福田、學無學以莊嚴、後有愛種永盡、我所既滅根亦除、已捨世間事業、功德所住處</td><td>福田、學無學、我所、後有愛種</td></tr><tr><td>第五章</td><td>傳承・三位代表人物</td><td>彌勒代表悲願（大乘救世）、舍利弗代表智慧（聞思分析）、須菩提代表無諍（空性實踐）</td><td>悲・智・修三軌並行</td></tr><tr><td>第六章</td><td>作者的意圖</td><td>演說是解釋而非發明；假名我是二諦的實踐；指月之指承認語言局限；一心善順是聽法前提</td><td>假名我、指月之指、一心善順</td></tr><tr><td>第七章</td><td>總結・演繹鏈與全息圖</td><td>般若源頭→空性邏輯→實踐驗證→大智度論；補錄擴展緣起頌；以心經「是諸法空相」印證收束</td><td>全息碎片、擴展緣起頌</td></tr></tbody></table><p class="c1p2-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p2-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p2Btn"),BOX=document.getElementById("c1p2Box"),MODAL=document.getElementById("c1p2Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=1;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p2Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P2:END-->
+
+<!--WY-C1P3:BEGIN-->
+<style id="wy-c1p3-css">
+.c1p3-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p3-fabbox.show{display:block;}
+.c1p3-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p3-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p3-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p3-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p3-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p3-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p3-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p3-modal.open{display:flex;}
+.c1p3-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p3-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p3-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p3-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p3-close:hover{background:#e3d5b8;}
+.c1p3-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p3-tbl th,.c1p3-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p3-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p3-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p3-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p3-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p3-fabbox{right:14px;}.c1p3-tbl{font-size:11.5px;}.c1p3-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p3-fabbox" id="c1p3Box"><button class="c1p3-btn" id="c1p3Btn" type="button" aria-label="開啟全景總表"><span class="c1p3-ic">&#9638;</span><span class="c1p3-ls"><span class="c1p3-l1">本品 &middot; 摩訶般若波羅蜜經之大因緣</span><span class="c1p3-l2">須彌山喻・十五復次大因緣</span></span></button></div><div class="c1p3-modal" id="c1p3Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p3-card"><button class="c1p3-close" id="c1p3Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第三品 摩訶般若波羅蜜經之大因緣 · 全景總表</h3><p class="sub">卷一・第3品｜全六章｜十五段「復次」大因緣・三大視角</p><table class="c1p3-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>大因緣之問</td><td>須彌山王不以無事而動，喻佛說法必有大因緣；本品以對象・二諦・中道三大視角解析</td><td>須彌山喻、三大視角</td></tr><tr><td>第二章</td><td>原典全文</td><td>十五段「復次」大因緣完整原文——廣說菩薩行、增益念佛三昧、師子吼本願……乃至般若東傳</td><td>十五復次</td></tr><tr><td>第三章</td><td>對象之因緣</td><td>佛陀說法對象由聲聞轉向菩薩；增益念佛三昧者之定力；師子吼顯露自度願與度他願之本願</td><td>師子吼、本願</td></tr><tr><td>第四章</td><td>二諦之因緣</td><td>佛身之二律背反（生身vs法身）；住般若實相清淨如虛空，故為一切智人；虛空無邊佛身亦爾</td><td>生身、法身、一切智人</td></tr><tr><td>第五章</td><td>中道之因緣</td><td>斷疑網破邪慢；大醫王治結使病；方便示現凡夫相令眾生起信；拔二邊（樂行/苦行）入中道</td><td>大醫王、方便示現、拔二邊</td></tr><tr><td>第六章</td><td>說法總綱與正法流布</td><td>四悉檀總攝十五因緣；補說阿鞞跋致與法身供養；般若東傳預言；終歸斷疑令入佛道</td><td>四悉檀、阿鞞跋致、般若東傳</td></tr></tbody></table><p class="c1p3-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p3-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p3Btn"),BOX=document.getElementById("c1p3Box"),MODAL=document.getElementById("c1p3Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=2;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p3Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P3:END-->
+
+<!--WY-C1P4:BEGIN-->
+<style id="wy-c1p4-css">
+.c1p4-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p4-fabbox.show{display:block;}
+.c1p4-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p4-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p4-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p4-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p4-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p4-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p4-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p4-modal.open{display:flex;}
+.c1p4-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p4-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p4-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p4-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p4-close:hover{background:#e3d5b8;}
+.c1p4-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p4-tbl th,.c1p4-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p4-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p4-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p4-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p4-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p4-fabbox{right:14px;}.c1p4-tbl{font-size:11.5px;}.c1p4-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p4-fabbox" id="c1p4Box"><button class="c1p4-btn" id="c1p4Btn" type="button" aria-label="開啟全景總表"><span class="c1p4-ic">&#9638;</span><span class="c1p4-ls"><span class="c1p4-l1">本品 &middot; 四悉檀・般若波羅蜜判教邏輯</span><span class="c1p4-l2">皆是實無相違背・判教總鑰</span></span></button></div><div class="c1p4-modal" id="c1p4Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p4-card"><button class="c1p4-close" id="c1p4Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第四品 四悉檀・般若波羅蜜判教邏輯 · 全景總表</h3><p class="sub">卷一・第4品｜全八章＋原典｜四把判教之鑰的總覽</p><table class="c1p4-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>經論原典</td><td>佛欲說第一義悉檀相故，說是般若波羅蜜經</td><td>十二部經八萬四千法藏，皆是實，無相違背——四悉檀判教總綱之根本出處</td><td>四悉檀</td></tr><tr><td>第一章</td><td>導論・佛法大海與判教之需</td><td>八萬四千法藏皆是實如何可能；「有我」與「無我」的表面張力，凸顯判教的必要性</td><td>有我、無我、判教</td></tr><tr><td>第二章</td><td>解碼之鑰・四悉檀總論</td><td>Siddhānta＝成就／宗義；「皆是實」的關鍵在於對應正確的悉檀，而非以一破一</td><td>世界、各各為人、對治、第一義</td></tr><tr><td>第三章</td><td>世界悉檀</td><td>緣起因果的脈絡真實；車雖由零件和合組成，但在功能層次上「車」真實存在</td><td>相續假、因緣和合</td></tr><tr><td>第四章</td><td>各各為人悉檀</td><td>應機施教的主觀真實；對斷見者說神識不滅、對常見者說無我，教學有效性優先於本體精確</td><td>隨器受量</td></tr><tr><td>第五章</td><td>對治悉檀</td><td>藥病相應的矯治真實；貪修不淨觀、瞋修慈心觀；一旦病除，藥亦須捨，否則藥久成毒</td><td>藥病相應、藥久成毒</td></tr><tr><td>第六章</td><td>第一義悉檀</td><td>諸法實相；逐項解構前三悉檀而非否定之，空性正是前三者得以運作的根本原因</td><td>實相無相</td></tr><tr><td>第七章</td><td>四悉檀的統合邏輯</td><td>同一命題「事物存在嗎」四悉檀給出不同而不矛盾的回答；如牛頓與量子雙層真理；真理無階級只有層次</td><td>動態平衡、判教四濾鏡</td></tr><tr><td>第八章</td><td>般若波羅蜜的獨特地位</td><td>從繁雜到清明四階；般若是皇冠上的寶石，為前三悉檀提供空性根基；終歸實相無相超越邏輯</td><td>皇冠寶石、實相無相</td></tr></tbody></table><p class="c1p4-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p4-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p4Btn"),BOX=document.getElementById("c1p4Box"),MODAL=document.getElementById("c1p4Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=3;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p4Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P4:END-->
+
+<!--WY-C1P5:BEGIN-->
+<style id="wy-c1p5-css">
+.c1p5-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p5-fabbox.show{display:block;}
+.c1p5-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p5-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p5-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p5-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p5-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p5-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p5-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p5-modal.open{display:flex;}
+.c1p5-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p5-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p5-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p5-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p5-close:hover{background:#e3d5b8;}
+.c1p5-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p5-tbl th,.c1p5-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p5-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p5-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p5-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p5-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p5-fabbox{right:14px;}.c1p5-tbl{font-size:11.5px;}.c1p5-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p5-fabbox" id="c1p5Box"><button class="c1p5-btn" id="c1p5Btn" type="button" aria-label="開啟全景總表"><span class="c1p5-ic">&#9638;</span><span class="c1p5-ls"><span class="c1p5-l1">本品 &middot; 釋初品中四悉檀義</span><span class="c1p5-l2">車喻人喻・說有救斷滅說無破常</span></span></button></div><div class="c1p5-modal" id="c1p5Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p5-card"><button class="c1p5-close" id="c1p5Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第五品 釋初品中四悉檀義 · 全景總表</h3><p class="sub">卷一・第5品｜全七章｜四悉檀原典案例・車喻與破群那</p><table class="c1p5-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>引論・經典的邏輯矛盾</td><td>「清淨天眼見眾生受果報」與「無人得觸無人得受」同出佛口，如何皆真而不顛倒</td><td>兩段對立經文</td></tr><tr><td>第二章</td><td>四悉檀體系總覽</td><td>悉檀＝宗／成就；四悉檀各各有實，如白光經稜鏡折射出不同光譜，非互相否定</td><td>各各有實</td></tr><tr><td>第三章</td><td>世界悉檀・因緣和合故有</td><td>車喻——轅軸輻輞和合故有車，無別車；乳（色香味觸因緣有）vs第二頭第三手（無因緣）之別</td><td>相續假、因緣實有</td></tr><tr><td>第四章</td><td>第一義悉檀・性空的邏輯</td><td>分析五蘊尋「人」不可得，人＝假名（如、法性、實際）；不壞假名而說實相</td><td>假名、二諦圓融</td></tr><tr><td>第五章</td><td>各各為人悉檀・教學的邏輯</td><td>觀人心行而為說法；對斷滅見者說有業報以拔斷見，對破群那（計常）說無受者以破我執</td><td>病歷式教學</td></tr><tr><td>第六章</td><td>中道・動態的平衡</td><td>說有為救斷滅，說無為破計常；佛二夜經「一切皆實不顛倒」印證邏輯服務於解脫</td><td>邏輯服務於解脫</td></tr><tr><td>第七章</td><td>系統架構總覽與結語</td><td>世界→各各為人→第一義金字塔階梯，層層遞進又相互支撐；結語濃縮為十六字偈</td><td>階梯結構</td></tr></tbody></table><p class="c1p5-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p5-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p5Btn"),BOX=document.getElementById("c1p5Box"),MODAL=document.getElementById("c1p5Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=4;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p5Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P5:END-->
+
+<!--WY-C1P6:BEGIN-->
+<style id="wy-c1p6-css">
+.c1p6-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p6-fabbox.show{display:block;}
+.c1p6-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p6-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p6-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p6-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p6-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p6-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p6-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p6-modal.open{display:flex;}
+.c1p6-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p6-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p6-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p6-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p6-close:hover{background:#e3d5b8;}
+.c1p6-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p6-tbl th,.c1p6-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p6-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p6-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p6-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p6-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p6-fabbox{right:14px;}.c1p6-tbl{font-size:11.5px;}.c1p6-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p6-fabbox" id="c1p6Box"><button class="c1p6-btn" id="c1p6Btn" type="button" aria-label="開啟全景總表"><span class="c1p6-ic">&#9638;</span><span class="c1p6-ls"><span class="c1p6-l1">本品 &middot; 中觀邏輯與對治悉檀</span><span class="c1p6-l2">三毒三藥對治・拔毒刺不執空</span></span></button></div><div class="c1p6-modal" id="c1p6Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p6-card"><button class="c1p6-close" id="c1p6Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第六品 中觀邏輯與對治悉檀 · 全景總表</h3><p class="sub">卷一・第6品｜全十三章｜三毒三藥・拔毒刺</p><table class="c1p6-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>對治悉檀原典</td><td>對治則有，實性則無；藥草治風熱冷三病之喻；三毒各有其善對治法，互用則非對治</td><td>對治則有、實性則無</td></tr><tr><td>第二章</td><td>定位・四悉檀中的對治邏輯</td><td>對治悉檀位居金字塔第三層，具強介入性，核心概念為應病與藥</td><td>應病與藥</td></tr><tr><td>第三章</td><td>核心悖論・對治則有實性則無</td><td>功能真理（治病情境中藥方真實有效）vs究竟真理（藥方無自性）；二諦觀下的法門中道</td><td>Functional／Ultimate Truth</td></tr><tr><td>第四章</td><td>藥與毒的相對論</td><td>沒有絕對良藥，同一藥性對不同病症的效果可能完全相反——脈絡決定價值</td><td>脈絡論</td></tr><tr><td>第五章</td><td>貪欲病・不淨觀對治</td><td>貪欲如引力場黏著性；不淨觀以厭離對治；誤對貪者修慈心，反而增益貪欲</td><td>不淨觀、增益貪欲</td></tr><tr><td>第六章</td><td>瞋恚病・慈心觀對治</td><td>瞋恚如爆炸燥熱；慈心觀以接納冷卻瞋火；誤對瞋者修不淨，反而增益瞋火</td><td>慈心觀、增益瞋火</td></tr><tr><td>第七章</td><td>貪瞋對治矩陣與拔毒刺</td><td>二乘二對治矩陣，交叉互用即是醫療失職；觀想不是目的，拔毒刺才是目的</td><td>拔毒刺</td></tr><tr><td>第八章</td><td>愚癡病・重新定義</td><td>非牛羊之愚，而是欲求實道卻邪心觀故生邪見的求道者之惑；情感對治對本體論錯誤無效</td><td>邪見之愚</td></tr><tr><td>第九章</td><td>特效藥・因緣觀破自性</td><td>十二因緣證明萬法無獨立自性，擊碎「實有」幻覺；淺深之別實為對症與否之別</td><td>十二因緣、自性</td></tr><tr><td>第十章</td><td>連結中論・破邪顯正</td><td>大智度論的應病與藥（實踐層）與中論的八不中道（邏輯層），交會於同一空性</td><td>空性、八不中道</td></tr><tr><td>第十一章</td><td>觀法是工具不是歸宿</td><td>藥治病、藥本身不可執；連空觀也要空亦復空，否則即成新執（惡取空）</td><td>空亦復空、惡取空</td></tr><tr><td>第十二章</td><td>大醫王急診室・對治次第總圖</td><td>五步驟流程（診斷→選藥→應用→止息→捨藥）；三張病床記憶圖示三毒三藥</td><td>五步驟、捨藥</td></tr><tr><td>第十三章</td><td>結語・深入經藏智慧如海</td><td>專家自省三問（藥不對症／藥當飯吃／複雜當智慧）；銜接下一階第一義悉檀</td><td>三問自省</td></tr></tbody></table><p class="c1p6-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p6-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p6Btn"),BOX=document.getElementById("c1p6Box"),MODAL=document.getElementById("c1p6Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=5;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p6Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P6:END-->
+
+<!--WY-C1P7:BEGIN-->
+<style id="wy-c1p7-css">
+.c1p7-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p7-fabbox.show{display:block;}
+.c1p7-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p7-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p7-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p7-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p7-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p7-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p7-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p7-modal.open{display:flex;}
+.c1p7-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p7-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p7-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p7-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p7-close:hover{background:#e3d5b8;}
+.c1p7-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p7-tbl th,.c1p7-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p7-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p7-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p7-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p7-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p7-fabbox{right:14px;}.c1p7-tbl{font-size:11.5px;}.c1p7-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p7-fabbox" id="c1p7Box"><button class="c1p7-btn" id="c1p7Btn" type="button" aria-label="開啟全景總表"><span class="c1p7-ic">&#9638;</span><span class="c1p7-ls"><span class="c1p7-l1">本品 &middot; 越過無常・對治悉檀辯證</span><span class="c1p7-l2">破三相業果危機・渡河捨筏</span></span></button></div><div class="c1p7-modal" id="c1p7Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p7-card"><button class="c1p7-close" id="c1p7Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第七品 越過無常・對治悉檀辯證 · 全景總表</h3><p class="sub">卷一・第7品｜全七章｜破三相・業果危機・渡河之喻</p><table class="c1p7-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>辯證座標</td><td>四悉檀次第（世界→各各為人→對治→第一義）；挑戰者質疑「無常即第一義」的常識陷阱</td><td>三法印陷阱</td></tr><tr><td>第二章</td><td>大智度論卷一原典</td><td>著常顛倒眾生觀無常是對治悉檀非第一義；三相辯破與業果論證的完整原文</td><td>對治悉檀無常段</td></tr><tr><td>第三章</td><td>第一重辯證・破三相</td><td>若生住滅是有為相，則「生」中亦應有三相，如是則無窮，二難推理封死此路</td><td>無窮過、生生</td></tr><tr><td>第四章</td><td>第二重辯證・業果的危機</td><td>若實性無常，則行業滅失無跡可尋，無行業云何有果報；如腐種子不生果，落入斷滅見</td><td>腐種喻、斷見</td></tr><tr><td>第五章</td><td>歸位・對治悉檀</td><td>無常、苦、無我皆是對治藥方，非世界本體描述；執藥成病之戒——無常見有常是名顛倒</td><td>著常顛倒、執藥成病</td></tr><tr><td>第六章</td><td>第一義悉檀・性空</td><td>一切法自性空故；空性成就因果（不斷）而非破壞因果；凡夫→小乘→大乘的跨越階梯</td><td>不斷、捨筏</td></tr><tr><td>第七章</td><td>總攝・渡河之後</td><td>對治悉檀與第一義悉檀對照表；渡河捨筏之喻；「知無常是為了離常，知空是為了離無常」</td><td>渡河喻、對照表</td></tr></tbody></table><p class="c1p7-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p7-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p7Btn"),BOX=document.getElementById("c1p7Box"),MODAL=document.getElementById("c1p7Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=6;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p7Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P7:END-->
+
+<!--WY-C1P8:BEGIN-->
+<style id="wy-c1p8-css">
+.c1p8-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p8-fabbox.show{display:block;}
+.c1p8-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p8-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p8-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p8-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p8-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p8-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p8-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p8-modal.open{display:flex;}
+.c1p8-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p8-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p8-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p8-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p8-close:hover{background:#e3d5b8;}
+.c1p8-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p8-tbl th,.c1p8-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p8-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p8-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p8-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p8-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p8-fabbox{right:14px;}.c1p8-tbl{font-size:11.5px;}.c1p8-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p8-fabbox" id="c1p8Box"><button class="c1p8-btn" id="c1p8Btn" type="button" aria-label="開啟全景總表"><span class="c1p8-ic">&#9638;</span><span class="c1p8-ls"><span class="c1p8-l1">本品 &middot; 第一義悉檀與諸法實相</span><span class="c1p8-l2">自愛法悖論・離四句心行處滅</span></span></button></div><div class="c1p8-modal" id="c1p8Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p8-card"><button class="c1p8-close" id="c1p8Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第八品 第一義悉檀與諸法實相 · 全景總表</h3><p class="sub">卷一・第8品｜全八章｜自愛法・四句與中論三大模組</p><table class="c1p8-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>經典原文</td><td>第一義悉檀離一切過失、不可變易、不可勝；眾義經偈；佛法內部犢子部／說一切有部／方廣道人三分裂原文</td><td>不可破、不可散</td></tr><tr><td>第二章</td><td>為何智者亦生諍競</td><td>語言的分別性、見的自動性、智慧不能解決分別本身的問題——三層結構性困境</td><td>見、戲論、諍競</td></tr><tr><td>第三章</td><td>見→戲論→諍競的循環</td><td>三環互相強化的無明動力學迴路；從諍競/戲論/見/無明四層下手，難度依序遞增</td><td>無明動力學</td></tr><tr><td>第四章</td><td>有受法故有諸論</td><td>受（執取為實）→論（辯護推演）→諍（互不相讓）三段因果鏈；不受、不見是實、不共諍競</td><td>受、不受</td></tr><tr><td>第五章</td><td>各自以為好餘皆妄語</td><td>世間治法vs出家聖法、外道苦行、犢子部／說一切有部／方廣道人三分裂皆源於「自愛法」</td><td>自愛法</td></tr><tr><td>第六章</td><td>清淨與不淨的悖論</td><td>以自愛法為清淨判準，則全體皆清淨亦全體皆不淨，判準自身崩潰，逼讀者離開觀點層</td><td>觀點層vs境界層</td></tr><tr><td>第七章</td><td>第一義悉檀・不可破不可散</td><td>離一切過失、不可變易、不可勝三大特質；黑板喻；無初無中無後、不盡不壞、遍無所依</td><td>遍無所依、不示諸法</td></tr><tr><td>第八章</td><td>四句與中論體系</td><td>catuṣkoṭi四句窮盡一切邏輯命題；二諦／八不／四句三大記憶模組；語言道斷心行處滅</td><td>四句、八不、二諦</td></tr></tbody></table><p class="c1p8-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p8-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p8Btn"),BOX=document.getElementById("c1p8Box"),MODAL=document.getElementById("c1p8Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=7;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p8Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P8:END-->
+
+<!--WY-C1P9:BEGIN-->
+<style id="wy-c1p9-css">
+.c1p9-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p9-fabbox.show{display:block;}
+.c1p9-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p9-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p9-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p9-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p9-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p9-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p9-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p9-modal.open{display:flex;}
+.c1p9-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p9-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p9-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p9-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p9-close:hover{background:#e3d5b8;}
+.c1p9-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p9-tbl th,.c1p9-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p9-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p9-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p9-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p9-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p9-fabbox{right:14px;}.c1p9-tbl{font-size:11.5px;}.c1p9-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p9-fabbox" id="c1p9Box"><button class="c1p9-btn" id="c1p9Btn" type="button" aria-label="開啟全景總表"><span class="c1p9-ic">&#9638;</span><span class="c1p9-ls"><span class="c1p9-l1">本品 &middot; 為長爪梵志大論議師說般若品</span><span class="c1p9-l2">我一切法不受・自指悖論</span></span></button></div><div class="c1p9-modal" id="c1p9Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p9-card"><button class="c1p9-close" id="c1p9Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第九品 為長爪梵志大論議師說般若品 · 全景總表</h3><p class="sub">卷一・第9品｜全十二章｜自指悖論・唯一的勝者是空</p><table class="c1p9-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>緣起・為大論議師說般若</td><td>般若第九因緣：為長爪梵志等閻浮提大論議師（一切論可破一切語可壞）生信而說</td><td>徹底懷疑論</td></tr><tr><td>第二章</td><td>本末・長爪梵志的成長背景</td><td>輸給姊姊論議生憍慢，發誓不剪爪讀盡十八經；以破論為樂，如大力狂象無所不踏</td><td>長爪梵志、大力狂象</td></tr><tr><td>第三章</td><td>遭遇・營救舍利弗的怒火</td><td>聞外甥舍利弗被剃度收徒，帶「揭穿騙局」的有罪推定直向佛所</td><td>有罪推定</td></tr><tr><td>第四章</td><td>立論・絕對否定的全稱命題</td><td>窮舉一切法皆可破後，改立「我一切法不受」的元立場——不建堡壘、立於不敗之策略</td><td>我一切法不受</td></tr><tr><td>第五章</td><td>反擊・自指悖論的迴旋標</td><td>佛不還擊不立論，只反問「汝一切法不受，是見受不？」讓命題自我指涉、自我擊中</td><td>自指悖論</td></tr><tr><td>第六章</td><td>二處負門</td><td>答「受」則現前妄語（粗，多人所知）；答「不受」則失去區別（細）——兩條路皆是死路</td><td>Double Bind</td></tr><tr><td>第七章</td><td>覺察・智者如好馬見鞭影</td><td>長爪即覺鞭影入心，選擇細負處門，答「一切法不受，是見亦不受」（防禦性硬吞）</td><td>好馬見鞭影</td></tr><tr><td>第八章</td><td>特權・消除傲慢的最後一擊</td><td>則無所受，與眾人無異，何用自高而生憍慢——佛所破的是「我」而非邏輯本身</td><td>觀點即自我的延伸</td></tr><tr><td>第九章</td><td>降伏・從沉默到轉化</td><td>不能得答→自知墮負→起恭敬生信；佛心柔濡「不彰其負、不言是非、不以為意」才是真正的感召</td><td>佛心柔濡、無諍之辯</td></tr><tr><td>第十章</td><td>離四句・解脫的邏輯</td><td>catuṣkoṭi四句全面否定；中觀不住四句中任一句，離四句絕百非；空是治療工具而非新立論</td><td>空見、離四句</td></tr><tr><td>第十一章</td><td>得果・遠塵離垢的兩重證悟</td><td>長爪梵志得須陀洹（當局者，經歷墮負轉化過程）；舍利弗以旁觀利根人身分即證阿羅漢</td><td>法眼淨</td></tr><tr><td>第十二章</td><td>無諍之辯・唯一的勝者是空</td><td>治療式邏輯——不建構亦不破壞，只指出對方命題的自指困境；勝者不是佛陀而是空本身</td><td>治療式邏輯</td></tr></tbody></table><p class="c1p9-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p9-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p9Btn"),BOX=document.getElementById("c1p9Box"),MODAL=document.getElementById("c1p9Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=8;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p9Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P9:END-->
+
+<!--WY-C1P10:BEGIN-->
+<style id="wy-c1p10-css">
+.c1p10-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p10-fabbox.show{display:block;}
+.c1p10-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p10-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p10-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p10-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p10-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p10-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p10-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p10-modal.open{display:flex;}
+.c1p10-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p10-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p10-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p10-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p10-close:hover{background:#e3d5b8;}
+.c1p10-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p10-tbl th,.c1p10-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p10-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p10-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p10-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p10-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p10-fabbox{right:14px;}.c1p10-tbl{font-size:11.5px;}.c1p10-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p10-fabbox" id="c1p10Box"><button class="c1p10-btn" id="c1p10Btn" type="button" aria-label="開啟全景總表"><span class="c1p10-ic">&#9638;</span><span class="c1p10-ls"><span class="c1p10-l1">本品 &middot; 般若無諍品</span><span class="c1p10-l2">觀諸法相異門・戲論寂滅</span></span></button></div><div class="c1p10-modal" id="c1p10Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p10-card"><button class="c1p10-close" id="c1p10Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第十品 般若無諍品 · 全景總表</h3><p class="sub">卷一・第10品｜全八章｜異門邏輯・戲論寂滅</p><table class="c1p10-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>序論・諸佛二種說法</td><td>觀人心隨可度者（對治語境）vs觀諸法相（實相語境）；般若選擇了觀諸法相的實相之路</td><td>觀人心、觀諸法相</td></tr><tr><td>第二章</td><td>語言的悖論・諍處與無諍處</td><td>有相／無相等對立命題皆是諍處；佛仍說諍法，因利根者不起諍，鈍根者取相著心故起諍</td><td>畢竟空、利根鈍根</td></tr><tr><td>第三章</td><td>畢竟空與無諍</td><td>若畢竟空可得可諍，即不名畢竟空；佛法藥局譬喻（對治→第一義→無所得）；「異門」邏輯提出</td><td>佛法藥局、異門</td></tr><tr><td>第四章</td><td>邏輯轉向一・超越善惡二元</td><td>傳統善／不善／無記三法門，般若異門說非善／非不善／非無記；世俗諦仍有善惡，第一義諦皆不可得</td><td>三法門異門</td></tr><tr><td>第五章</td><td>邏輯轉向二・四念處的質變</td><td>聲聞觀身不淨除欲貪（對治）；菩薩觀身而不生身覺觀、不得身（無所得）；三念處亦如是</td><td>無所得</td></tr><tr><td>第六章</td><td>邏輯轉向三・五蘊與無常的辯證</td><td>色無常行，亦不行般若波羅蜜——雙遣常與無常方入實相；空亦復空，警惕惡取空</td><td>雙遣邏輯、空亦復空</td></tr><tr><td>第七章</td><td>無諍的究竟義</td><td>無我可諍亦無法可諍，有無二事皆寂滅；世俗→小乘→大乘→無諍四階昇華路徑</td><td>戲論寂滅</td></tr><tr><td>第八章</td><td>結語・因緣無量般若無邊</td><td>六七八乃至無量法門亦如是；讀經三守則——辨語境、不廢方便、不滯方便</td><td>不廢方便、不滯方便</td></tr></tbody></table><p class="c1p10-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p10-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p10Btn"),BOX=document.getElementById("c1p10Box"),MODAL=document.getElementById("c1p10Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=9;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p10Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P10:END-->
+
+<!--WY-C1P11:BEGIN-->
+<style id="wy-c1p11-css">
+.c1p11-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p11-fabbox.show{display:block;}
+.c1p11-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p11-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p11-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p11-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p11-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p11-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p11-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p11-modal.open{display:flex;}
+.c1p11-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p11-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p11-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p11-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p11-close:hover{background:#e3d5b8;}
+.c1p11-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p11-tbl th,.c1p11-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p11-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p11-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p11-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p11-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p11-fabbox{right:14px;}.c1p11-tbl{font-size:11.5px;}.c1p11-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p11-fabbox" id="c1p11Box"><button class="c1p11-btn" id="c1p11Btn" type="button" aria-label="開啟全景總表"><span class="c1p11-ic">&#9638;</span><span class="c1p11-ls"><span class="c1p11-l1">本品 &middot; 釋「如是」義</span><span class="c1p11-l2">信為能入・空故柔軟</span></span></button></div><div class="c1p11-modal" id="c1p11Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p11-card"><button class="c1p11-close" id="c1p11Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第十一品 釋「如是」義 · 全景總表</h3><p class="sub">卷一・第11品｜全四章｜信・無諍・中道三層遞進</p><table class="c1p11-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>經典原文・「如是」義之發問</td><td>佛法大海，信為能入，智為能度；「如是」義者即是信；信者言是事如是、不信者言不如是</td><td>如是＝信</td></tr><tr><td>第二章</td><td>第一層次・信為能入</td><td>牛皮喻（柔軟可塑）、寶山喻（信如手能取）、枯樹喻（俱迦梨無信墮惡道）、梵天王請法蓮華喻、獨說信人、智者所不量</td><td>信為能入</td></tr><tr><td>第三章</td><td>第二層次・無諍之盾</td><td>自法愛染毀他法者雖持戒仍不脫地獄苦；栰喻經「法尚應捨何況非法」；摩犍提「持啞法得道」之詰被破；悉捨我我所、不取諸法相</td><td>栰喻、無諍之盾</td></tr><tr><td>第四章</td><td>第三層次・中道的密碼</td><td>二諦圓融（信為能入╱智為能度雙螺旋）；緣起無自性故無諍可立；空故柔軟；第三種立場——如實觀察</td><td>緣起無自性、如實觀察</td></tr></tbody></table><p class="c1p11-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p11-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p11Btn"),BOX=document.getElementById("c1p11Box"),MODAL=document.getElementById("c1p11Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=10;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p11Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P11:END-->
+
+<!--WY-C1P12:BEGIN-->
+<style id="wy-c1p12-css">
+.c1p12-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p12-fabbox.show{display:block;}
+.c1p12-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p12-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p12-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p12-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p12-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p12-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p12-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p12-modal.open{display:flex;}
+.c1p12-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p12-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p12-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p12-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p12-close:hover{background:#e3d5b8;}
+.c1p12-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p12-tbl th,.c1p12-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p12-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p12-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p12-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p12-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p12-fabbox{right:14px;}.c1p12-tbl{font-size:11.5px;}.c1p12-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p12-fabbox" id="c1p12Box"><button class="c1p12-btn" id="c1p12Btn" type="button" aria-label="開啟全景總表"><span class="c1p12-ic">&#9638;</span><span class="c1p12-ls"><span class="c1p12-l1">本品 &middot; 釋「我」義</span><span class="c1p12-l2">金錢買銅錢・不怕說我</span></span></button></div><div class="c1p12-modal" id="c1p12Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p12-card"><button class="c1p12-close" id="c1p12Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第十二品 釋「我」義 · 全景總表</h3><p class="sub">卷一・第12品｜全八章｜二諦・三根本・雙空辯證</p><table class="c1p12-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>經題與大哉問</td><td>一切法空無我，云何佛經初頭言如是我聞？佛弟子雖知無我，隨俗法說我，非實我也</td><td>大哉問</td></tr><tr><td>第二章</td><td>二諦圓融</td><td>第一實義中實無我，世俗諦中假名我；金錢買銅錢之喻——賣買法應爾，說我於無我法中不應難</td><td>金錢買銅錢</td></tr><tr><td>第三章</td><td>天問經的印證</td><td>諸漏已永盡的阿羅漢仍能言「有吾我」；世界法中說我，非第一實義中說，故雖說我無咎</td><td>雖說我無咎</td></tr><tr><td>第四章</td><td>語言的三根本</td><td>邪見／慢／名字三根本，前二不淨後一淨；凡人三根全具、學人破邪見餘慢、聖人唯餘名字</td><td>三根本</td></tr><tr><td>第五章</td><td>執著的陷阱</td><td>著無吾我相言是實者，正是把藥（無我）當實有握緊，反成新的執著；不執著有亦不執著無</td><td>藥當毒</td></tr><tr><td>第六章</td><td>中論的雙空辯證</td><td>不空尚不得，何況得於空——空、不空俱遣；「不見見無見，是實名涅槃」；非二安隱門</td><td>非二安隱門</td></tr><tr><td>第七章</td><td>融會貫通・專家三模組</td><td>模組一二諦（本體層）、模組二三根本（語言層）、模組三八不中道（邏輯層）；阿羅漢買菜總結畫面</td><td>三模組</td></tr><tr><td>第八章</td><td>回到「如是我聞」</td><td>真正的無我，是不怕說我——語言成為慈悲工具而非自我牢籠；諸佛所行處是名無我法</td><td>不怕說我</td></tr></tbody></table><p class="c1p12-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p12-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p12Btn"),BOX=document.getElementById("c1p12Box"),MODAL=document.getElementById("c1p12Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=11;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p12Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P12:END-->
+
+<!--WY-C1P13:BEGIN-->
+<style id="wy-c1p13-css">
+.c1p13-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p13-fabbox.show{display:block;}
+.c1p13-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p13-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p13-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p13-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p13-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p13-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p13-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p13-modal.open{display:flex;}
+.c1p13-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p13-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p13-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p13-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p13-close:hover{background:#e3d5b8;}
+.c1p13-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p13-tbl th,.c1p13-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p13-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p13-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p13-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p13-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p13-fabbox{right:14px;}.c1p13-tbl{font-size:11.5px;}.c1p13-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p13-fabbox" id="c1p13Box"><button class="c1p13-btn" id="c1p13Btn" type="button" aria-label="開啟全景總表"><span class="c1p13-ic">&#9638;</span><span class="c1p13-ls"><span class="c1p13-l1">本品 &middot; 釋「聞」義・耳根圓通</span><span class="c1p13-l2">三處尋覓不可得・因緣和合</span></span></button></div><div class="c1p13-modal" id="c1p13Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p13-card"><button class="c1p13-close" id="c1p13Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第十三品 釋「聞」義・耳根圓通 · 全景總表</h3><p class="sub">卷一・第13品｜全七章｜三嫌疑犯・因緣和合・無我因果不失</p><table class="c1p13-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>緒論・聞者的本體論追問</td><td>如是我聞逼問「誰在聽」；世俗語言主謂受詞結構預設了單一執行「聞」的主體</td><td>聞者云何聞</td></tr><tr><td>第二章</td><td>經典原文呈現</td><td>耳根／耳識／意識三候選人問答全文；答方因緣和合正解；「有業有果無作者」偈頌總攝</td><td>聞篇全文</td></tr><tr><td>第三章</td><td>核心提問與三嫌疑犯</td><td>窮舉歸謬法鎖定耳根（生理硬體）、耳識（神經訊號）、意識（認知CPU）三個候選聞者</td><td>三嫌疑犯</td></tr><tr><td>第四章</td><td>破執三處</td><td>耳根無覺知太笨、耳識一念不能分別太快、意識不接現在太慢（盲聾悖論反證）——三處尋覓不可得</td><td>三處尋覓不可得</td></tr><tr><td>第五章</td><td>因緣和合的正解</td><td>耳根不破＋聲至可聞處＋意欲聞三因緣，情塵意和合成觸而生耳識，再生意識分別；收音機喻</td><td>情塵意、觸</td></tr><tr><td>第六章</td><td>核心心法・無我與因果</td><td>有業亦有果，無作業果者——此第一甚深；雖空亦不斷、相續亦不常，罪福亦不失</td><td>有業有果無作者</td></tr><tr><td>第七章</td><td>總結・中觀辯證與聞的當下</td><td>耳根圓通邏輯路徑圖（問題→破執→正解→心法）；三不聞破自性見；緣起（How）與中道（What）雙軌並觀</td><td>真空妙有</td></tr></tbody></table><p class="c1p13-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p13-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p13Btn"),BOX=document.getElementById("c1p13Box"),MODAL=document.getElementById("c1p13Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=12;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p13Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P13:END-->
+
+<!--WY-C1P14:BEGIN-->
+<style id="wy-c1p14-css">
+.c1p14-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p14-fabbox.show{display:block;}
+.c1p14-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p14-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p14-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p14-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p14-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p14-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p14-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p14-modal.open{display:flex;}
+.c1p14-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p14-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p14-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p14-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p14-close:hover{background:#e3d5b8;}
+.c1p14-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p14-tbl th,.c1p14-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p14-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p14-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p14-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p14-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p14-fabbox{right:14px;}.c1p14-tbl{font-size:11.5px;}.c1p14-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p14-fabbox" id="c1p14Box"><button class="c1p14-btn" id="c1p14Btn" type="button" aria-label="開啟全景總表"><span class="c1p14-ic">&#9638;</span><span class="c1p14-ls"><span class="c1p14-l1">本品 &middot; 俗語一時之辯</span><span class="c1p14-l2">一異二難・假名施設</span></span></button></div><div class="c1p14-modal" id="c1p14Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p14-card"><button class="c1p14-close" id="c1p14Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第十四品 俗語一時之辯 · 全景總表</h3><p class="sub">卷一・第14品｜全八章｜一異二難・假名施設</p><table class="c1p14-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>經典開端，哲學矛盾</td><td>陰入持三科不攝「時」與「數」，論敵詰難：既非實法，何以佛經言「一時」</td><td>陰入持、本體論潔癖</td></tr><tr><td>第二章</td><td>隨俗無咎・泥木天像的比喻</td><td>泥木雕像非真天神卻可禮拜；「一時」雖非實法，隨俗說之無咎，語言是傳遞真理的載具</td><td>泥木天像、隨俗無咎</td></tr><tr><td>第三章</td><td>實有論的雙重反擊</td><td>援引佛說「一人出世間」等經典權威；復以「一物生一心、二物生二心」的認知必然力挺實有</td><td>一物生一心</td></tr><tr><td>第四章</td><td>中觀的解剖刀・一異二難</td><td>若「一」與「物」同一則二俱有過，若相異亦二俱有過——一異門是檢驗一切實有主張的解剖刀</td><td>一異門</td></tr><tr><td>第五章</td><td>若一門的三重過失</td><td>一即瓶則萬物混亂無別（提梨釋迦喻）；數法豈有色的屬性錯置；名實不分的語言混亂</td><td>三重過失</td></tr><tr><td>第六章</td><td>若異門與和合救難的瓦解</td><td>若異則瓶上便無一性；「和合」救難被對稱性反詰戳破（何以不名一為瓶）；先一後多，數系瓦解</td><td>對稱性反詰</td></tr><tr><td>第七章</td><td>假名施設</td><td>二門俱破，一法不可得，陰持入皆不攝；「一」非實體而是假名施設（Prajñapti），如尺量物而尺非被量者</td><td>假名施設Prajñapti</td></tr><tr><td>第八章</td><td>中道心法・隨俗語言，心實不著</td><td>隨俗語言名為一、心實不著、不墮邪見十二字心訣；智者不壞假名，亦不著實法</td><td>不壞假名不著實法</td></tr></tbody></table><p class="c1p14-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p14-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p14Btn"),BOX=document.getElementById("c1p14Box"),MODAL=document.getElementById("c1p14Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=13;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p14Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P14:END-->
+
+<!--WY-C1P15:BEGIN-->
+<style id="wy-c1p15-css">
+.c1p15-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c1p15-fabbox.show{display:block;}
+.c1p15-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c1p15-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c1p15-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c1p15-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c1p15-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c1p15-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c1p15-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c1p15-modal.open{display:flex;}
+.c1p15-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c1p15-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c1p15-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c1p15-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c1p15-close:hover{background:#e3d5b8;}
+.c1p15-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c1p15-tbl th,.c1p15-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c1p15-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c1p15-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c1p15-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c1p15-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+@media(max-width:900px){.c1p15-fabbox{right:14px;}.c1p15-tbl{font-size:11.5px;}.c1p15-card{padding:26px 14px 16px;}}
+</style>
+<div class="c1p15-fabbox" id="c1p15Box"><button class="c1p15-btn" id="c1p15Btn" type="button" aria-label="開啟全景總表"><span class="c1p15-ic">&#9638;</span><span class="c1p15-ls"><span class="c1p15-l1">本品 &middot; 釋初品「一時」義</span><span class="c1p15-l2">迦羅三摩耶・做時間的主人</span></span></button></div><div class="c1p15-modal" id="c1p15Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c1p15-card"><button class="c1p15-close" id="c1p15Close" type="button" aria-label="關閉">&times;</button><h3>卷一·第十五品 釋初品「一時」義 · 全景總表</h3><p class="sub">卷一・第15品｜全九章｜迦羅vs三摩耶・做時間的主人</p><table class="c1p15-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>辯證螺旋總綱</td><td>本品沿語言→本體→邏輯→實踐四層辯證螺旋展開，缺一不可，把外道時間觀與凡夫直覺一併破斥</td><td>四層辯證</td></tr><tr><td>第二章</td><td>語言抉擇・迦羅vs三摩耶</td><td>佛捨易唸的迦羅（暗示時為實有、萬物之因、命運巨輪）取難唸的三摩耶（因緣聚合、無實體暗示）</td><td>迦羅、三摩耶</td></tr><tr><td>第三章</td><td>本體論辯・破除實體時間</td><td>外道見果知因主張時為不變因；龍樹以泥丸三態喻（土塵過去／泥丸現在／瓶未來）示時若常則因果斷裂</td><td>泥丸三態</td></tr><tr><td>第四章</td><td>邏輯破斥・三世檢證</td><td>四重破斥：雜過之咎、相待假之反破、自相必歸現在、過去復過去或不過去皆自相捨——三世自相俱不可立</td><td>雜過、四重破斥</td></tr><tr><td>第五章</td><td>時間的終極定義</td><td>見陰、界、入生滅，假名為時，無別時；時間是標籤（Label）而非容器（Container）；燃燒的膠捲喻</td><td>假名為時無別時</td></tr><tr><td>第六章</td><td>實踐圓融・戒律與二諦</td><td>時食非時食之戒建立於世俗諦而非第一義；戒律三功能（避譏嫌／護佛法／定禮法）；語境隔離故經用三摩耶戒用柯邏</td><td>二諦圓融、語境隔離</td></tr><tr><td>第七章</td><td>兩個記憶模組</td><td>模組一鍵盤與病毒（迦羅鍵易中毒、三摩耶鍵除邪見）；模組二燃燒的膠捲（過去灰滅／現在即生即滅／未來未顯影）</td><td>記憶模組</td></tr><tr><td>第八章</td><td>總結・中觀時間智慧</td><td>語言→本體→邏輯→實踐四重圓融；結語：做時間的主人而非奴隸，時間就是你的生命變化</td><td>做時間的主人</td></tr><tr><td>第九章</td><td>經典原文</td><td>迦羅三摩耶問答、泥丸三態喻、四重破斥、假名為時、戒律二諦問答——原典全文完整還原對照</td><td>原典全文</td></tr></tbody></table><p class="c1p15-note">總表依本品原典通讀整理，供快速掌握章節脈絡與核心命題；欲窮其義，仍請詳讀本品全文。</p></div></div>
+<script id="wy-c1p15-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c1p15Btn"),BOX=document.getElementById("c1p15Box"),MODAL=document.getElementById("c1p15Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=14;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c1p15Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1P15:END-->
+<!--WY-C1TOC:BEGIN-->
+<style id="wy-c1toc-css">
+.toc-actions{position:absolute;right:14px;bottom:12px;z-index:3;display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end;}
+.toc-actions .toc-yt{position:static !important;right:auto !important;bottom:auto !important;}
+.toc-tbl{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:14px;cursor:pointer;background:linear-gradient(135deg,#8b5e3c,#a9803f);color:#fff;font-family:"Noto Sans TC",sans-serif;font-size:12px;letter-spacing:1px;font-weight:600;line-height:1.25;white-space:nowrap;box-shadow:0 1px 4px rgba(139,94,60,.4);border:1px solid rgba(255,255,255,.2);user-select:none;transition:filter .2s,transform .2s,box-shadow .2s;}
+.toc-tbl:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 4px 12px rgba(139,94,60,.5);}
+.toc-tbl:focus-visible{outline:2px solid #d4a84b;outline-offset:2px;}
+.toc-tbl .tt-ic{font-size:11px;line-height:1;}
+@media(max-width:520px){.toc-tbl{padding:4px 10px;letter-spacing:.3px;}}
+</style>
+<script id="wy-c1toc-js">(function(){
+function nOf(a){var m=(a.getAttribute('href')||'').match(/#chapter-(\d+)/);return m?m[1]:null;}
+function build(){
+  var links=document.querySelectorAll('a.toc-card');
+  for(var i=0;i<links.length;i++){
+    var link=links[i], wrap=link.parentNode;
+    if(!wrap||wrap.querySelector('.toc-actions'))continue;
+    var n=nOf(link);if(!n)continue;
+    var act=document.createElement('div');act.className='toc-actions';
+    var tbl=document.createElement('span');tbl.className='toc-tbl';tbl.setAttribute('data-tbl',n);
+    tbl.setAttribute('role','button');tbl.setAttribute('tabindex','0');
+    tbl.setAttribute('aria-label','第'+n+'品 全景總表');tbl.title='本品全景總表';
+    tbl.innerHTML='<span class="tt-ic">&#9638;</span>總表';
+    act.appendChild(tbl);
+    var vid=wrap.querySelector('.toc-yt');if(vid){act.appendChild(vid);}
+    wrap.appendChild(act);
+  }
+}
+function openT(n){var m=document.getElementById('c1p'+n+'Modal');if(m){m.classList.add('open');}else{location.hash='#chapter-'+n;}}
+document.addEventListener('click',function(e){
+  var b=(e.target&&e.target.closest)?e.target.closest('.toc-tbl'):null;if(!b)return;
+  e.preventDefault();e.stopPropagation();openT(b.getAttribute('data-tbl'));
+},true);
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter'&&e.key!==' ')return;
+  var b=(e.target&&e.target.closest)?e.target.closest('.toc-tbl'):null;if(!b)return;
+  e.preventDefault();openT(b.getAttribute('data-tbl'));
+});
+build();
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',build);
+var c=0,iv=setInterval(function(){build();if(++c>20)clearInterval(iv);},250);
+})();</script>
+<!--WY-C1TOC:END-->
 </body>
 </html>
