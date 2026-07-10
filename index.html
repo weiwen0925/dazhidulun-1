@@ -2656,5 +2656,53 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH1P14:END-->
+<!--WY-BH1P15:BEGIN-->
+<style id="wy-bh1p15-css">
+.bh1p15-fabbox{position:fixed;right:22px;bottom:260px;z-index:123;display:none;}
+.bh1p15-fabbox.show{display:block;}
+.bh1p15-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.bh1p15-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
+.bh1p15-ic{font-size:15px;line-height:1;color:#bcd4ea;}
+.bh1p15-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.bh1p15-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.bh1p15-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
+.bh1p15-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
+.bh1p15-modal.open{display:flex;}
+.bh1p15-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.bh1p15-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
+.bh1p15-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
+.bh1p15-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.bh1p15-close:hover{background:#dde2e6;}
+.bh1p15-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
+.bh1p15-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
+.bh1p15-tbl th,.bh1p15-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
+.bh1p15-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
+.bh1p15-tbl thead th:nth-child(1){width:32%;}.bh1p15-tbl thead th:nth-child(2){width:41%;}.bh1p15-tbl thead th:nth-child(3){width:27%;}
+.bh1p15-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
+.bh1p15-guan{background:#eef2f5;color:#37505f;}
+.bh1p15-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
+.bh1p15-tbl tbody tr:nth-child(even) td.bh1p15-guan{background:#e8eef2;}
+.bh1p15-tbl b{color:#8b2500;}
+.bh1p15-guan b{color:#2f6b5a;}
+.bh1p15-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
+.bh1p15-note b{color:#8b2500;}
+@media(max-width:900px){.bh1p15-fabbox{right:14px;}.bh1p15-tbl{font-size:11px;}.bh1p15-card{padding:22px 12px 14px;}}
+</style>
+<div class="bh1p15-fabbox" id="bh1p15Box"><button class="bh1p15-btn" id="bh1p15Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh1p15-ic">譯</span><span class="bh1p15-ls"><span class="bh1p15-l1">本品 · 原文·白話·中觀</span><span class="bh1p15-l2">白話翻譯表</span></span></button></div><div class="bh1p15-modal" id="bh1p15Modal" role="dialog" aria-modal="true"><div class="bh1p15-card"><button class="bh1p15-close" id="bh1p15Close" type="button" aria-label="關閉">×</button><h3>卷一 · 第15品 白話翻譯表</h3><p class="sub">《大智度論》卷一釋初品「一時」義·破「時」（迦羅時／三摩耶）品 · 原文↔白話↔中觀概念 逐段對照（五段原典）</p><table class="bh1p15-tbl"><caption>《大智度論》卷一「破時」義 · 原文｜白話翻譯｜中觀概念（共5段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh1p15-src">「時」者，今當說。</td><td>「時」（時間）這個概念，現在應當加以解說。</td><td class="bh1p15-guan"><b>標宗</b>——標舉「時」為所論之題，準備破析其實有性。</td></tr><tr><td class="bh1p15-src">答曰：若言迦羅，俱亦有疑。</td><td>回答說：如果用「迦羅」（梵語，指實體性、固定不變的時間）來稱說時間，同樣也會產生疑惑過失。</td><td class="bh1p15-guan"><b>破實體時間之名</b>——「迦羅時」暗示時是實法，故有過失。</td></tr><tr><td class="bh1p15-src">如泥丸是現在時，土塵是過去時，瓶是未來時。時相常故，過去時不作未來時；汝經書法，時是一物，以是故，過去世不作未來世，亦不作現在世，雜過故。過去世中亦無未來世，以是故無未來世。現在世亦如是。</td><td>（外人以「迦羅」立論）就好比：泥丸是現在時（尚未成瓶），土塵是過去時（更早階段），瓶子是未來時（已成之後）。因為「時」的體相是恆常不變的，所以過去時不會變成未來時；照你們（外道）經書的說法，「時」是一個獨立實體，因此過去世不會轉為未來世，也不會轉為現在世，否則就有三世混雜之過。過去世當中並沒有未來世，所以（若時實有）就不該有未來世；現在世的道理也是一樣。</td><td class="bh1p15-guan"><b>破三世實有</b>——若時為常一實法，三世應雜亂或斷絕，故不成立。</td></tr><tr><td class="bh1p15-src">如是等種種除邪見故，不說迦羅時，說三摩耶。見陰、界、入生滅，假名為時，無別時。所謂方、時、離、合，一、異、長、短等名字，出凡人心著，謂是實有法；以是故，除棄世界名字語言法。</td><td>由於以上種種原因，為除去這類邪見，佛陀不說「迦羅時」，而說「三摩耶」（隨俗假立之時）。從觀察五陰、十八界、十二入等法的生滅遷流中，假名安立為「時」，其實並沒有一個離開陰界入生滅之外、另外獨立存在的「時」。所謂方位、時間、分離、和合，以及同一、差異、長、短等名相，都是凡夫心生執著才產生的，以為是真實存在的法；因此，（佛法）要超越、捨棄這些世俗名相語言所構成的執著。</td><td class="bh1p15-guan"><b>假名為時·緣起無別體</b>——時依陰界入生滅假立，非離法別有實體。</td></tr><tr><td class="bh1p15-src">亦是毘尼中結戒法，是世界中實，非第一實法相，吾我法相實不可得故；亦為眾人瞋呵故，亦欲護佛法使久存，定弟子禮法故，諸三界世尊結諸戒。是中不應求：有何實？有何名字等？何者相應？何者不相應？何者是法如是相？何者是法不如是相？以是故，是事不應難！</td><td>同樣的道理也適用於戒律（毘尼）中所制訂的戒法：這些戒法只是世俗諦中的「實」（施設上的真實），並非第一義諦中的真實法相，因為「我」這個法相終究不可得；佛陀制戒，也是為避免遭受世人譏嫌責難，也是為護持佛法久住於世，並為弟子確立禮法軌範，所以三界導師世尊才制訂了種種戒律。對於這些隨俗施設之法，不應該追問：它有什麼真實體性？有什麼確切名字？和什麼相應？和什麼不相應？哪個法是這樣的相？哪個法不是這樣的相？因此，對於隨俗假立之法不應該用這種方式去責難！</td><td class="bh1p15-guan"><b>世俗諦施設·不應戲論</b>——戒法、時法皆依世俗安立，不可以第一義苛求，二諦分明。</td></tr></tbody></table><p class="bh1p15-note">本表為卷一第15品「破時」的原文·白話·中觀三欄對照。此品破外道「迦羅時」（實體時間）之執，顯佛說「三摩耶」乃依五陰、十八界、十二入生滅<b>假名為時</b>，並援引毘尼結戒之例，說明世俗施設不可以第一義苛求，正是<b>二諦</b>分明、不落戲論之教法。白話忠於原意、不增不減。</p></div></div>
+<script id="wy-bh1p15-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById(NS+"Btn"),BOX=document.getElementById(NS+"Box"),MODAL=document.getElementById(NS+"Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=14;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+function upd(){BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id===NS+"Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-BH1P15:END-->
 </body>
 </html>
