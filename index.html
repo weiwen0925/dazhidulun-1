@@ -2437,55 +2437,6 @@ else window.addEventListener('load',function(){setTimeout(bhGo,200);});
 })();
 </script>
 <!--WY-GOTO:END-->
-<!--WY-BH1P1:BEGIN-->
-<style id="wy-bh1p1-css">
-.bh1p1-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
-.bh1p1-fabbox.show{display:block;}
-.bh1p1-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
-.bh1p1-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
-.bh1p1-ic{font-size:15px;line-height:1;color:#bcd4ea;}
-.bh1p1-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
-.bh1p1-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
-.bh1p1-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
-.bh1p1-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
-.bh1p1-modal.open{display:flex;}
-.bh1p1-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
-.bh1p1-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
-.bh1p1-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
-.bh1p1-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
-.bh1p1-close:hover{background:#dde2e6;}
-.bh1p1-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
-.bh1p1-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
-.bh1p1-tbl th,.bh1p1-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
-.bh1p1-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
-.bh1p1-tbl thead th:nth-child(1){width:32%;}.bh1p1-tbl thead th:nth-child(2){width:41%;}.bh1p1-tbl thead th:nth-child(3){width:27%;}
-.bh1p1-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
-.bh1p1-qa{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f0e6d2;letter-spacing:.3px;}
-.bh1p1-guan{background:#eef2f5;color:#37505f;}
-.bh1p1-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
-.bh1p1-tbl tbody tr:nth-child(even) td.bh1p1-guan{background:#e8eef2;}
-.bh1p1-tbl b{color:#8b2500;}
-.bh1p1-guan b{color:#2f6b5a;}
-.bh1p1-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
-@media(max-width:900px){.bh1p1-fabbox{right:14px;}.bh1p1-tbl{font-size:11px;}.bh1p1-card{padding:22px 12px 14px;}}
-</style>
-<div class="bh1p1-fabbox" id="bh1p1Box"><button class="bh1p1-btn" id="bh1p1Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh1p1-ic">譯</span><span class="bh1p1-ls"><span class="bh1p1-l1">本品 · 原文·白話·中觀</span><span class="bh1p1-l2">白話翻譯表</span></span></button></div><div class="bh1p1-modal" id="bh1p1Modal" role="dialog" aria-modal="true"><div class="bh1p1-card"><button class="bh1p1-close" id="bh1p1Close" type="button" aria-label="關閉">×</button><h3>卷一 · 第1品 白話翻譯表（僧叡釋論序）</h3><p class="sub">大智度論卷一·僧叡釋論序 · 原文↔白話↔中觀概念 逐段對照（含問答）</p><table class="bh1p1-tbl"><caption>僧叡釋論序 · 原文｜白話翻譯｜中觀概念（共19段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh1p1-src">夫萬有本於生生而生，生者無生；變化兆於物始而始，始者無始。然則無生、無始，物之性也。</td><td>萬物看似從「不斷生起」中生出，但真正的「生」其實無所謂生（本無實有之生）；變化看似從「事物的開端」中開始，但真正的「始」其實無所謂始。可見<b>無生、無始才是萬物的本性</b>。</td><td class="bh1p1-guan"><b>不生（無生）</b>——「生者無生」即八不中道之首：諸法緣起、無自性之生，故不生不滅。</td></tr><tr><td class="bh1p1-src">生、始不動於性，而萬有陳於外、悔吝生於內者，其唯邪思乎！</td><td>「生」與「始」本不曾動搖這無生無始的本性；然而萬象紛陳於外、悔恨憂惱生於內心，難道不正是<b>錯誤的思惟（邪思）</b>在作祟嗎！</td><td class="bh1p1-guan"><b>破戲論／顛倒</b>——「悔吝生於內唯邪思」，妄想分別（戲論）是生死根，正是中觀所破。</td></tr><tr><td class="bh1p1-src">正覺有以見邪思之自起故，阿含為之作；知滯有之由惑故，般若為之照。</td><td>佛（正覺）正因洞見邪思如何自行生起，所以宣說《<b>阿含</b>》來對治；又因了知眾生執滯於「有」源於迷惑，所以宣說《<b>般若</b>》來照破。</td><td class="bh1p1-guan"><b>二諦並用</b>——阿含（世俗諦·對治）、般若（勝義諦·照空），依二諦而說法。</td></tr><tr><td class="bh1p1-src">然而照本希夷，津涯浩汗，理超文表，趣絕思境。以言求之，則乖其深；以智測之，則失其旨。</td><td>然而般若所照的本體幽微難見、境界如汪洋無涯，道理超越文字所能表達，旨趣斷絕一切思量所能到達。<b>用語言去求它反而背離其深妙，用心智去測它反而失卻其本旨</b>。</td><td class="bh1p1-guan"><b>實相離言</b>——「理超文表、以言求乖其深」：實相離四句、絕百非，非言智可及。</td></tr><tr><td class="bh1p1-src">二乘所以顛沛於三藏，雜學所以曝鱗於龍門者，不其然乎！</td><td>聲聞、緣覺二乘之所以在三藏教中跌撞難通，外道雜學之所以如魚曝鱗於龍門（躍不過去），不正是因為這個緣故嗎！</td><td class="bh1p1-guan"><b>不達畢竟空之失</b>——二乘、雜學顛沛曝鱗，皆因滯於有見、未證空義。</td></tr><tr><td class="bh1p1-src">是以馬鳴起於正法之餘，龍樹生於像法之末。正餘易弘故，直振其遺風瑩拂而已。</td><td>因此<b>馬鳴</b>菩薩興起於正法將盡之時，<b>龍樹</b>菩薩誕生於像法將末之際。正法餘緒還容易弘揚，所以馬鳴只需直接振起、擦亮佛陀遺留的風範就夠了。</td><td class="bh1p1-guan"><b>破邪顯正·中觀傳承</b>——馬鳴龍樹應運出世，續正法、破像末邪見。</td></tr><tr><td class="bh1p1-src">像末多端故，乃寄跡凡夫示悟物以漸，又假照龍宮以朗搜玄之慧，託聞幽祕以窮微言之妙，爾乃憲章智典作茲釋論。</td><td>像法之末頭緒繁雜，所以龍樹託身凡夫之相、循序漸進地開悟眾生；又藉入龍宮閱藏磨亮探幽的智慧、藉聞受幽深祕法窮盡微言的奧妙，這才依準佛的智慧經典，造出這部《<b>釋論</b>》（大智度論）。</td><td class="bh1p1-guan"><b>善巧方便</b>——「寄跡凡夫、假照龍宮」，以方便漸引眾生而成《釋論》。</td></tr><tr><td class="bh1p1-src">其開夷路也，則令大乘之駕方軌而直入；其辯實相也，則使妄見之惑不遠而自復。</td><td>這部論<b>開闢平坦大道</b>，讓大乘的車駕能循軌並行、直入正道；它<b>辨明諸法實相</b>，使虛妄知見的迷惑不必走遠就能自行回正。</td><td class="bh1p1-guan"><b>諸法實相</b>——「辯實相使妄見自復」：顯中道實相，虛妄見自正。</td></tr><tr><td class="bh1p1-src">其為論也，初辭擬之，必標眾異以盡美；卒成之終，則舉無執以盡善。釋所不盡，則立論以明之；論其未辯，則寄折中以定之。使靈篇無難喻之章，千載悟作者之旨，信若人之功矣！</td><td>論的寫法：起初立論必先羅列各種異說以求周備（盡美），最後收結則歸於無所執著以臻至善（盡善）；解釋不透徹處就另立論議闡明，論議未辨清處就折中取正論定。如此使這部靈妙論著再無難懂章節、讓千年後人都能領悟作者本旨——這實在是龍樹的功勞！</td><td class="bh1p1-guan"><b>中道·無所執</b>——「標眾異盡美、舉無執盡善、折中定之」：不落兩邊的中道論法。</td></tr><tr><td class="bh1p1-src">有鳩摩羅耆婆法師者，少播聰慧之聞，長集奇拔之譽，才舉則亢標萬里，言發則英辯榮枯，常杖茲論為淵鏡憑高、致以明宗。</td><td>有一位<b>鳩摩羅耆婆（鳩摩羅什）</b>法師，年少即以聰慧聞名，長成後集奇特超拔的美譽於一身；才華一展則高標萬里，言辭一出則雄辯足以判別是非。他常以這部論作為深鑑高台，用來闡明宗旨。</td><td class="bh1p1-guan"><b>般若為鏡</b>——「杖茲論為淵鏡以明宗」，以般若正觀為準繩明宗。</td></tr><tr><td class="bh1p1-src">以秦弘始三年，歲次星紀，十二月二十日，自姑臧至長安。秦王虛襟既已蘊在，昔見之心豈徒則悅而已！晤言相對，則淹留終日；研微造盡，則窮年忘倦。</td><td>後秦<b>弘始三年（公元401年）十二月二十日</b>，羅什從姑臧來到長安。秦王（姚興）早已虛心期待、蘊蓄敬慕，昔日渴見之心一旦相見豈只欣喜而已！兩人晤談相對常整日流連，探研微義、窮究到底則終年忘倦。</td><td class="bh1p1-guan"><b>弘法因緣</b>——羅什至長安、秦王相契，弘法（度生）因緣具足和合。</td></tr><tr><td class="bh1p1-src">又以晤言之功雖深，而恨獨符之心不曠；造盡之要雖玄，而惜津梁之勢未普。遂以莫逆之懷，相與弘兼忘之慧，乃集京師義業沙門，命公卿賞契之士五百餘人，集於渭濱逍遙園。</td><td>又想到：私下晤談所得雖深，卻遺憾只有兩人心契、未能廣被；窮究的要義雖玄，卻可惜這座度人的橋樑尚未普及。於是憑莫逆之交的情懷，一同弘揚「能所兼忘」的智慧，便召集京城研習義理的沙門、及公卿中意氣相投者<b>五百多人，會集於渭水之濱的逍遙園</b>。</td><td class="bh1p1-guan"><b>能所兼忘·無所得</b>——「弘兼忘之慧」：能觀所觀雙泯，即無所得般若。</td></tr><tr><td class="bh1p1-src">經本既定，乃出此釋論。論之略本有十萬偈，偈有三十二字，并三百二十萬言。梵夏既乖，又有煩簡之異，三分除二，得此百卷。</td><td>般若經本既已譯定，才譯出這部《釋論》。論的略本有<b>十萬偈</b>、每偈三十二字，合計三百二十萬言。梵語與漢語體例既不同、又有繁簡之別，於是<b>刪去三分之二，得成這一百卷</b>。</td><td class="bh1p1-guan"><b>假名施設</b>——「三分除二得百卷」：文字乃假名，隨宜刪略而不壞其義。</td></tr><tr><td class="bh1p1-src">於大智三十萬言，玄章婉旨，朗然可見，歸途直達，無復惑趣之疑，以文求之無間然矣。</td><td>在這《大智度論》三十萬言中，深玄的章句、婉曲的旨趣都清晰可見，通往義理的路直達無礙，再無迷失方向的疑慮，順著文句去尋求便毫無滯礙了。</td><td class="bh1p1-guan"><b>般若正觀</b>——「歸途直達、無惑趣之疑」：依正觀直趣實相、不迷歧途。</td></tr><tr><td class="bh1p1-src">故天竺傳云：「像、正之末，微馬鳴、龍樹，道學之門其淪胥溺喪矣！」其故何耶？寔由二未𢍆微邪法用盛，虛言與實教並興，嶮徑與夷路爭轍，始進者化之而流離，向道者惑之而播越，非二匠其孰與正之！</td><td>所以天竺相傳：「正法、像法將盡之際，若沒有馬鳴、龍樹，佛道學問之門恐怕就要相繼淪沒喪失了！」為何如此？實在是因二位菩薩尚未出世、正法微弱時，邪法盛行，虛妄之說與真實教法一起流行、險路與正道爭相並行；初學者被邪說轉化而流離，向道者被迷惑而漂泊——若非這兩位大匠，還有誰能匡正呢！</td><td class="bh1p1-guan"><b>破邪顯正</b>——「邪法盛、虛實並興、嶮夷爭轍」，非二匠不能正之。</td></tr><tr><td class="bh1p1-src">是以天竺諸國，為之立廟，宗之若佛。又稱而詠之曰：「智慧日已頹，斯人令再曜；世昏寢已久，斯人悟令覺。」若然者，真可謂功格十地，道侔補處者矣！傳而稱之，不亦宜乎！</td><td>因此天竺各國都為他們立廟、尊崇如佛，又稱頌詠歎道：「智慧的太陽已西沉，是這人讓它重新放光；世間昏睡已太久，是這人開悟讓它醒覺。」若真如此，龍樹實可說<b>功齊十地、道與一生補處（候補佛位）的菩薩相等</b>了！這樣傳頌稱揚他，不也很恰當嗎！</td><td class="bh1p1-guan"><b>般若光明</b>——「智慧日頹、斯人再曜」：般若如日，照破無明昏寢。</td></tr><tr><td class="bh1p1-src">幸哉！此中鄙之外，忽得全有此論。梵文委曲，皆如初品。法師以秦人好簡故，裁而略之。若備譯其文，將近千有餘卷。</td><td>真幸運啊！在這偏遠之地（中土），竟能忽然完整地擁有這部論。梵文原本委曲詳盡，全都像第一品那樣繁複。羅什法師因漢地人喜好簡要，所以加以裁剪節略；<b>若把原文完備譯出，將近一千多卷</b>。</td><td class="bh1p1-guan"><b>隨機方便</b>——「秦人好簡、裁而略之」：應機刪略，方便攝化。</td></tr><tr><td class="bh1p1-src">法師於秦語大格，唯譯一往；方言殊好，猶隔而未通。苟言不相喻，則情無由比。不比之情，則不可以託悟懷於文表；不喻之言，亦何得委殊塗於一致。</td><td>法師對漢語的大體格局也只是粗通一遍，漢語各地方言的特殊講究仍隔閡未通。倘若語言不能互相會意，情意就無從對應；情意不能對應，就無法把所悟心懷寄託於文字；言語不能會意，又怎能把不同表達歸於一致的義理呢。</td><td class="bh1p1-guan"><b>言詮之限·離言</b>——「言不相喻、情無由比」：言語有限，實相須離言而契。</td></tr><tr><td class="bh1p1-src">理固然矣，進欲停筆爭是，則交競終日卒無所成；退欲簡而便之，則負傷於穿鑿之譏以二三。唯案譯而書，都不備飾。幸冀明悟之賢，略其文而挹其玄也！</td><td>道理本就如此（翻譯兩難）：進一步停筆爭辯何者為是，就整日爭競而一事無成；退一步只求簡便，又難免落下穿鑿附會、增減失真的譏評。因此<b>只依原譯如實書寫，全不加修飾</b>。但願明達通悟的賢者，能略過文字的粗疏，而汲取其中的玄旨啊！</td><td class="bh1p1-guan"><b>依義不依語·得意忘言</b>——「唯案譯而書、略文挹玄」：不執文字，取其玄旨。</td></tr></tbody></table><p class="bh1p1-note">卷一第1品「僧叡釋論序」原文·白話·中觀三欄對照，含問曰/答曰。白話忠於原意；中觀欄標出各段中觀義理。</p></div></div>
-<script id="wy-bh1p1-js">(function(){
-var CH=document.querySelectorAll("section.chapter");
-var BTN=document.getElementById("bh1p1Btn"),BOX=document.getElementById("bh1p1Box"),MODAL=document.getElementById("bh1p1Modal");
-if(!CH.length||!BTN||!BOX||!MODAL)return;
-var TARGET=0;
-function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
-/*BHPLACE*/function place(){var z=document.getElementById("c1p1Box"),eb=document.querySelector(".wy-ebox"),b=null;if(z){var r=z.getBoundingClientRect();if(r.height>4)b=Math.round(window.innerHeight-r.top)+8;}if(b===null&&eb){var r2=eb.getBoundingClientRect();if(r2.height>4)b=Math.round(window.innerHeight-r2.top)+8;}if(b!==null)BOX.style.bottom=b+"px";}
-function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
-var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
-window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
-BTN.addEventListener("click",function(){MODAL.classList.add("open");});
-MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="bh1p1Close")MODAL.classList.remove("open");});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
-upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
-})();</script>
-<!--WY-BH1P1:END-->
 <!--WY-BH1P2:BEGIN-->
 <style id="wy-bh1p2-css">
 .bh1p2-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
@@ -3197,5 +3148,54 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH1P13:END-->
+<!--WY-BH1P1:BEGIN-->
+<style id="wy-bh1p1-css">
+.bh1p1-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
+.bh1p1-fabbox.show{display:block;}
+.bh1p1-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.bh1p1-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
+.bh1p1-ic{font-size:15px;line-height:1;color:#bcd4ea;}
+.bh1p1-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.bh1p1-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.bh1p1-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
+.bh1p1-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
+.bh1p1-modal.open{display:flex;}
+.bh1p1-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.bh1p1-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
+.bh1p1-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
+.bh1p1-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.bh1p1-close:hover{background:#dde2e6;}
+.bh1p1-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
+.bh1p1-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
+.bh1p1-tbl th,.bh1p1-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
+.bh1p1-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
+.bh1p1-tbl thead th:nth-child(1){width:32%;}.bh1p1-tbl thead th:nth-child(2){width:41%;}.bh1p1-tbl thead th:nth-child(3){width:27%;}
+.bh1p1-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
+.bh1p1-qa{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f0e6d2;letter-spacing:.3px;}
+.bh1p1-guan{background:#eef2f5;color:#37505f;}
+.bh1p1-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
+.bh1p1-tbl tbody tr:nth-child(even) td.bh1p1-guan{background:#e8eef2;}
+.bh1p1-tbl b{color:#8b2500;}
+.bh1p1-guan b{color:#2f6b5a;}
+.bh1p1-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
+@media(max-width:900px){.bh1p1-fabbox{right:14px;}.bh1p1-tbl{font-size:11px;}.bh1p1-card{padding:22px 12px 14px;}}
+</style>
+<div class="bh1p1-fabbox" id="bh1p1Box"><button class="bh1p1-btn" id="bh1p1Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh1p1-ic">譯</span><span class="bh1p1-ls"><span class="bh1p1-l1">本品 · 原文·白話·中觀</span><span class="bh1p1-l2">白話翻譯表</span></span></button></div><div class="bh1p1-modal" id="bh1p1Modal" role="dialog" aria-modal="true"><div class="bh1p1-card"><button class="bh1p1-close" id="bh1p1Close" type="button" aria-label="關閉">×</button><h3>卷一 · 第1品 白話翻譯表（僧叡釋論序）</h3><p class="sub">大智度論卷一·僧叡釋論序 · 原文↔白話↔中觀概念 逐段對照（含問答）</p><table class="bh1p1-tbl"><caption>僧叡釋論序 · 原文｜白話翻譯｜中觀概念（共19段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh1p1-src">夫萬有本於生生而生，生者無生；變化兆於物始而始，始者無始。然則無生、無始，物之性也。</td><td>萬物看似從「不斷生起」中生出，但真正的「生」其實無所謂生（本無實有之生）；變化看似從「事物的開端」中開始，但真正的「始」其實無所謂始。可見<b>無生、無始才是萬物的本性</b>。</td><td class="bh1p1-guan"><b>不生（無生）</b>——「生者無生」即八不中道之首：諸法緣起、無自性之生，故不生不滅。</td></tr><tr><td class="bh1p1-src">生、始不動於性，而萬有陳於外、悔吝生於內者，其唯邪思乎！</td><td>「生」與「始」本不曾動搖這無生無始的本性；然而萬象紛陳於外、悔恨憂惱生於內心，難道不正是<b>錯誤的思惟（邪思）</b>在作祟嗎！</td><td class="bh1p1-guan"><b>破戲論／顛倒</b>——「悔吝生於內唯邪思」，妄想分別（戲論）是生死根，正是中觀所破。</td></tr><tr><td class="bh1p1-src">正覺有以見邪思之自起故，阿含為之作；知滯有之由惑故，般若為之照。</td><td>佛（正覺）正因洞見邪思如何自行生起，所以宣說《<b>阿含</b>》來對治；又因了知眾生執滯於「有」源於迷惑，所以宣說《<b>般若</b>》來照破。</td><td class="bh1p1-guan"><b>二諦並用</b>——阿含（世俗諦·對治）、般若（勝義諦·照空），依二諦而說法。</td></tr><tr><td class="bh1p1-src">然而照本希夷，津涯浩汗，理超文表，趣絕思境。以言求之，則乖其深；以智測之，則失其旨。</td><td>然而般若所照的本體幽微難見、境界如汪洋無涯，道理超越文字所能表達，旨趣斷絕一切思量所能到達。<b>用語言去求它反而背離其深妙，用心智去測它反而失卻其本旨</b>。</td><td class="bh1p1-guan"><b>實相離言</b>——「理超文表、以言求乖其深」：實相離四句、絕百非，非言智可及。</td></tr><tr><td class="bh1p1-src">二乘所以顛沛於三藏，雜學所以曝鱗於龍門者，不其然乎！</td><td>聲聞、緣覺二乘之所以在三藏教中跌撞難通，外道雜學之所以如魚曝鱗於龍門（躍不過去），不正是因為這個緣故嗎！</td><td class="bh1p1-guan"><b>不達畢竟空之失</b>——二乘、雜學顛沛曝鱗，皆因滯於有見、未證空義。</td></tr><tr><td class="bh1p1-src">是以馬鳴起於正法之餘，龍樹生於像法之末。正餘易弘故，直振其遺風瑩拂而已。</td><td>因此<b>馬鳴</b>菩薩興起於正法將盡之時，<b>龍樹</b>菩薩誕生於像法將末之際。正法餘緒還容易弘揚，所以馬鳴只需直接振起、擦亮佛陀遺留的風範就夠了。</td><td class="bh1p1-guan"><b>破邪顯正·中觀傳承</b>——馬鳴龍樹應運出世，續正法、破像末邪見。</td></tr><tr><td class="bh1p1-src">像末多端故，乃寄跡凡夫示悟物以漸，又假照龍宮以朗搜玄之慧，託聞幽祕以窮微言之妙，爾乃憲章智典作茲釋論。</td><td>像法之末頭緒繁雜，所以龍樹託身凡夫之相、循序漸進地開悟眾生；又藉入龍宮閱藏磨亮探幽的智慧、藉聞受幽深祕法窮盡微言的奧妙，這才依準佛的智慧經典，造出這部《<b>釋論</b>》（大智度論）。</td><td class="bh1p1-guan"><b>善巧方便</b>——「寄跡凡夫、假照龍宮」，以方便漸引眾生而成《釋論》。</td></tr><tr><td class="bh1p1-src">其開夷路也，則令大乘之駕方軌而直入；其辯實相也，則使妄見之惑不遠而自復。</td><td>這部論<b>開闢平坦大道</b>，讓大乘的車駕能循軌並行、直入正道；它<b>辨明諸法實相</b>，使虛妄知見的迷惑不必走遠就能自行回正。</td><td class="bh1p1-guan"><b>諸法實相</b>——「辯實相使妄見自復」：顯中道實相，虛妄見自正。</td></tr><tr><td class="bh1p1-src">其為論也，初辭擬之，必標眾異以盡美；卒成之終，則舉無執以盡善。釋所不盡，則立論以明之；論其未辯，則寄折中以定之。使靈篇無難喻之章，千載悟作者之旨，信若人之功矣！</td><td>論的寫法：起初立論必先羅列各種異說以求周備（盡美），最後收結則歸於無所執著以臻至善（盡善）；解釋不透徹處就另立論議闡明，論議未辨清處就折中取正論定。如此使這部靈妙論著再無難懂章節、讓千年後人都能領悟作者本旨——這實在是龍樹的功勞！</td><td class="bh1p1-guan"><b>中道·無所執</b>——「標眾異盡美、舉無執盡善、折中定之」：不落兩邊的中道論法。</td></tr><tr><td class="bh1p1-src">有鳩摩羅耆婆法師者，少播聰慧之聞，長集奇拔之譽，才舉則亢標萬里，言發則英辯榮枯，常杖茲論為淵鏡憑高、致以明宗。</td><td>有一位<b>鳩摩羅耆婆（鳩摩羅什）</b>法師，年少即以聰慧聞名，長成後集奇特超拔的美譽於一身；才華一展則高標萬里，言辭一出則雄辯足以判別是非。他常以這部論作為深鑑高台，用來闡明宗旨。</td><td class="bh1p1-guan"><b>般若為鏡</b>——「杖茲論為淵鏡以明宗」，以般若正觀為準繩明宗。</td></tr><tr><td class="bh1p1-src">以秦弘始三年，歲次星紀，十二月二十日，自姑臧至長安。秦王虛襟既已蘊在，昔見之心豈徒則悅而已！晤言相對，則淹留終日；研微造盡，則窮年忘倦。</td><td>後秦<b>弘始三年（公元401年）十二月二十日</b>，羅什從姑臧來到長安。秦王（姚興）早已虛心期待、蘊蓄敬慕，昔日渴見之心一旦相見豈只欣喜而已！兩人晤談相對常整日流連，探研微義、窮究到底則終年忘倦。</td><td class="bh1p1-guan"><b>弘法因緣</b>——羅什至長安、秦王相契，弘法（度生）因緣具足和合。</td></tr><tr><td class="bh1p1-src">又以晤言之功雖深，而恨獨符之心不曠；造盡之要雖玄，而惜津梁之勢未普。遂以莫逆之懷，相與弘兼忘之慧，乃集京師義業沙門，命公卿賞契之士五百餘人，集於渭濱逍遙園。</td><td>又想到：私下晤談所得雖深，卻遺憾只有兩人心契、未能廣被；窮究的要義雖玄，卻可惜這座度人的橋樑尚未普及。於是憑莫逆之交的情懷，一同弘揚「能所兼忘」的智慧，便召集京城研習義理的沙門、及公卿中意氣相投者<b>五百多人，會集於渭水之濱的逍遙園</b>。</td><td class="bh1p1-guan"><b>能所兼忘·無所得</b>——「弘兼忘之慧」：能觀所觀雙泯，即無所得般若。</td></tr><tr><td class="bh1p1-src">經本既定，乃出此釋論。論之略本有十萬偈，偈有三十二字，并三百二十萬言。梵夏既乖，又有煩簡之異，三分除二，得此百卷。</td><td>般若經本既已譯定，才譯出這部《釋論》。論的略本有<b>十萬偈</b>、每偈三十二字，合計三百二十萬言。梵語與漢語體例既不同、又有繁簡之別，於是<b>刪去三分之二，得成這一百卷</b>。</td><td class="bh1p1-guan"><b>假名施設</b>——「三分除二得百卷」：文字乃假名，隨宜刪略而不壞其義。</td></tr><tr><td class="bh1p1-src">於大智三十萬言，玄章婉旨，朗然可見，歸途直達，無復惑趣之疑，以文求之無間然矣。</td><td>在這《大智度論》三十萬言中，深玄的章句、婉曲的旨趣都清晰可見，通往義理的路直達無礙，再無迷失方向的疑慮，順著文句去尋求便毫無滯礙了。</td><td class="bh1p1-guan"><b>般若正觀</b>——「歸途直達、無惑趣之疑」：依正觀直趣實相、不迷歧途。</td></tr><tr><td class="bh1p1-src">故天竺傳云：「像、正之末，微馬鳴、龍樹，道學之門其淪胥溺喪矣！」其故何耶？寔由二未𢍆微邪法用盛，虛言與實教並興，嶮徑與夷路爭轍，始進者化之而流離，向道者惑之而播越，非二匠其孰與正之！</td><td>所以天竺相傳：「正法、像法將盡之際，若沒有馬鳴、龍樹，佛道學問之門恐怕就要相繼淪沒喪失了！」為何如此？實在是因二位菩薩尚未出世、正法微弱時，邪法盛行，虛妄之說與真實教法一起流行、險路與正道爭相並行；初學者被邪說轉化而流離，向道者被迷惑而漂泊——若非這兩位大匠，還有誰能匡正呢！</td><td class="bh1p1-guan"><b>破邪顯正</b>——「邪法盛、虛實並興、嶮夷爭轍」，非二匠不能正之。</td></tr><tr><td class="bh1p1-src">是以天竺諸國，為之立廟，宗之若佛。又稱而詠之曰：「智慧日已頹，斯人令再曜；世昏寢已久，斯人悟令覺。」若然者，真可謂功格十地，道侔補處者矣！傳而稱之，不亦宜乎！</td><td>因此天竺各國都為他們立廟、尊崇如佛，又稱頌詠歎道：「智慧的太陽已西沉，是這人讓它重新放光；世間昏睡已太久，是這人開悟讓它醒覺。」若真如此，龍樹實可說<b>功齊十地、道與一生補處（候補佛位）的菩薩相等</b>了！這樣傳頌稱揚他，不也很恰當嗎！</td><td class="bh1p1-guan"><b>般若光明</b>——「智慧日頹、斯人再曜」：般若如日，照破無明昏寢。</td></tr><tr><td class="bh1p1-src">幸哉！此中鄙之外，忽得全有此論。梵文委曲，皆如初品。法師以秦人好簡故，裁而略之。若備譯其文，將近千有餘卷。</td><td>真幸運啊！在這偏遠之地（中土），竟能忽然完整地擁有這部論。梵文原本委曲詳盡，全都像第一品那樣繁複。羅什法師因漢地人喜好簡要，所以加以裁剪節略；<b>若把原文完備譯出，將近一千多卷</b>。</td><td class="bh1p1-guan"><b>隨機方便</b>——「秦人好簡、裁而略之」：應機刪略，方便攝化。</td></tr><tr><td class="bh1p1-src">法師於秦語大格，唯譯一往；方言殊好，猶隔而未通。苟言不相喻，則情無由比。不比之情，則不可以託悟懷於文表；不喻之言，亦何得委殊塗於一致。</td><td>法師對漢語的大體格局也只是粗通一遍，漢語各地方言的特殊講究仍隔閡未通。倘若語言不能互相會意，情意就無從對應；情意不能對應，就無法把所悟心懷寄託於文字；言語不能會意，又怎能把不同表達歸於一致的義理呢。</td><td class="bh1p1-guan"><b>言詮之限·離言</b>——「言不相喻、情無由比」：言語有限，實相須離言而契。</td></tr><tr><td class="bh1p1-src">理固然矣，進欲停筆爭是，則交競終日卒無所成；退欲簡而便之，則負傷於穿鑿之譏以二三。唯案譯而書，都不備飾。幸冀明悟之賢，略其文而挹其玄也！</td><td>道理本就如此（翻譯兩難）：進一步停筆爭辯何者為是，就整日爭競而一事無成；退一步只求簡便，又難免落下穿鑿附會、增減失真的譏評。因此<b>只依原譯如實書寫，全不加修飾</b>。但願明達通悟的賢者，能略過文字的粗疏，而汲取其中的玄旨啊！</td><td class="bh1p1-guan"><b>依義不依語·得意忘言</b>——「唯案譯而書、略文挹玄」：不執文字，取其玄旨。</td></tr></tbody></table><p class="bh1p1-note">卷一第1品「僧叡釋論序」原文·白話·中觀三欄對照，含問曰/答曰。白話忠於原意；中觀欄標出各段中觀義理。</p></div></div>
+<script id="wy-bh1p1-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("bh1p1Btn"),BOX=document.getElementById("bh1p1Box"),MODAL=document.getElementById("bh1p1Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=0;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+/*BHPLACE*/function place(){var z=document.getElementById("c1p1Box"),eb=document.querySelector(".wy-ebox"),b=null;if(z){var r=z.getBoundingClientRect();if(r.height>4)b=Math.round(window.innerHeight-r.top)+8;}if(b===null&&eb){var r2=eb.getBoundingClientRect();if(r2.height>4)b=Math.round(window.innerHeight-r2.top)+8;}if(b!==null)BOX.style.bottom=b+"px";}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="bh1p1Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-BH1P1:END-->
 </body>
 </html>
