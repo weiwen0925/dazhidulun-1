@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#241d16">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect x=%274%27 y=%274%27 width=%2756%27 height=%2756%27 rx=%2710%27 fill=%27%23a8402b%27 stroke=%27%23e3c085%27 stroke-width=%274%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2734%27 text-anchor=%27middle%27 fill=%27%23fbe9dc%27 font-family=%27serif%27%3E%E6%99%BA%3C/text%3E%3C/svg%3E">
+<title>大智度論過招場</title>
+<meta name="description" content="《大智度論》卷一第一品〈僧叡釋論序〉影片複習遊戲：序脈排序、疑者出招你替僧叡接、難句白話、原文填空、關鍵提醒、配對快打。原典依大智度論讀本逐字照錄。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700;900&display=swap">
+<style>
+/* 版式：門頁「大智度論導讀影片」暖金褐框景的延伸——褐墨底、金線、朱印金框、米色原典；單一深色（與門頁一致，刻意不做淺色） */
+:root{
+  --ink-0:#1d1711; --ink-1:#241d16; --ink-2:#2c241c; --ink-3:#382e25; --ink-4:#46382b;
+  --line:rgba(217,184,124,.24); --line-2:rgba(217,184,124,.5);
+  --gold:#e3c085; --amber:#d9b87c; --gsoft:#c9a96e; --text:#f5e4cd; --mute:#c3b39a; --cream:#fbefdc;
+  --seal:#a8402b; --seal-ink:#fbe9dc;
+  --gold-line:rgba(227,192,133,.55); --gold-wash:rgba(227,192,133,.08);
+  --ok:#a5d6ae; --ok-bg:rgba(165,214,174,.12); --bad:#f0a084; --bad-bg:rgba(240,160,132,.13);
+  --f-display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --f-latin:"Cormorant Garamond","Times New Roman",serif;
+  --r:12px; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--ink-1)}
+body{margin:0;background:radial-gradient(80% 50% at 50% 0%,rgba(227,192,133,.12),transparent 70%),var(--ink-1);color:var(--text);font-family:var(--f-body);font-size:18px;line-height:1.75;min-height:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+a{color:var(--gold)}
+.wrap{position:relative;max-width:960px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+.frame{position:relative;border:1px solid var(--line-2);border-radius:22px;padding:34px 30px 30px;background:linear-gradient(180deg,rgba(70,56,43,.62),rgba(44,36,28,.55));box-shadow:0 0 0 1px rgba(217,184,124,.08),0 34px 70px -34px rgba(0,0,0,.8);overflow:hidden}
+.frame::after{content:"";position:absolute;inset:9px;border:1px solid rgba(217,184,124,.12);border-radius:16px;pointer-events:none}
+.frame::before{content:"智";position:absolute;right:-26px;top:-60px;font-family:var(--f-display);font-size:300px;font-weight:900;line-height:1;color:rgba(227,192,133,.05);pointer-events:none}
+@media (max-width:640px){.frame{padding:24px 14px 20px;border-radius:16px}.frame::before{font-size:200px}}
+.top{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.eyebrow{font-family:var(--f-latin);font-style:italic;font-size:clamp(16px,3.2vw,21px);letter-spacing:.12em;color:var(--amber)}
+.ttl{display:inline-flex;align-items:center;gap:16px}
+h1{margin:0;font-family:var(--f-display);font-weight:900;font-size:clamp(30px,6.6vw,46px);letter-spacing:.16em;color:var(--gold);text-wrap:balance;line-height:1.2}
+.seal{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:38px;height:58px;border-radius:4px;background:var(--seal);color:var(--seal-ink);font-family:var(--f-display);font-size:17px;font-weight:700;line-height:1.15;box-shadow:inset 0 0 0 2px rgba(227,192,133,.75),0 4px 10px -4px rgba(0,0,0,.6);transform:rotate(-3deg);flex:none}
+.vol{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-size:17px;letter-spacing:.12em;color:var(--text)}
+.vol b{font-weight:700;color:var(--gold)}
+.sub{margin:0;color:var(--mute);font-size:17px;max-width:40em}
+.backs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;font-size:15px}
+.backs a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--line-2)}
+.backs a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.backs a.yt{color:var(--gold)}
+.stages{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:26px 0 0;padding:12px;border:1px solid var(--line);border-radius:12px;background:rgba(29,23,17,.35)}
+@media (max-width:520px){.stages{grid-template-columns:repeat(2,minmax(0,1fr));padding:10px}.stg span{font-size:17px}}
+@media (min-width:760px){.stages{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.stg{display:flex;flex-direction:column;align-items:center;gap:0;padding:8px 4px 7px;border:1px solid rgba(217,184,124,.32);border-radius:8px;background:rgba(227,192,133,.05);text-align:center;min-width:0;transition:border-color .2s,transform .2s,box-shadow .2s}
+.stg:hover{border-color:var(--gold);transform:translateY(-2px)}
+.stg b{font-family:var(--f-display);font-weight:500;font-size:13px;color:var(--mute)}
+.stg span{font-family:var(--f-display);font-weight:600;font-size:16px;line-height:1.4;color:var(--text)}
+.stg em{font-style:italic;font-family:var(--f-latin);font-size:15px;color:var(--amber);min-height:1.2em;line-height:1.3}
+.stg[aria-current="true"]{border-color:var(--gold);background:linear-gradient(180deg,#e8c886,#c9a96e);box-shadow:0 6px 16px -8px rgba(217,184,124,.7)}
+.stg[aria-current="true"] b,.stg[aria-current="true"] em{color:#4a3a28}
+.stg[aria-current="true"] span{color:#2c241c;font-weight:700}
+main{position:relative;margin-top:22px}
+.panel{display:flex;flex-direction:column;gap:16px}
+.ptitle{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;border-bottom:1px dashed var(--line);padding-bottom:10px}
+.ptitle h2{margin:0;font-family:var(--f-display);font-weight:700;font-size:clamp(23px,4.6vw,28px);letter-spacing:.08em;color:var(--gold)}
+.ptitle p{margin:0;font-family:var(--f-latin);font-style:italic;font-size:18px;color:var(--amber)}
+.hint{margin:0;color:var(--mute);font-size:17px}
+.retreat{margin:0;font-size:17px;color:var(--gold);border-left:2px solid var(--gold-line);padding-left:12px}
+.qrow{display:flex;gap:18px;align-items:flex-start;border:1px solid var(--line-2);border-radius:var(--r);padding:18px;background:linear-gradient(180deg,rgba(227,192,133,.09),rgba(44,36,28,.6))}
+.pill{display:flex;flex-direction:column;align-items:center;gap:6px;flex:none;width:72px}
+.pill i{font-style:normal;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;min-height:72px;padding:8px 6px;border-radius:4px;background:var(--seal);color:var(--seal-ink);font-family:var(--f-display);font-weight:700;font-size:18px;letter-spacing:.12em;box-shadow:inset 0 0 0 2px rgba(227,192,133,.7),0 4px 10px -4px rgba(0,0,0,.6);transform:rotate(-2deg)}
+.pill small{font-size:13px;color:var(--mute);letter-spacing:.06em;text-align:center}
+.qt{min-width:0;display:flex;flex-direction:column;gap:6px}
+.qbig{margin:0;font-family:var(--f-display);font-weight:700;font-size:clamp(22px,4.6vw,30px);line-height:1.5;color:var(--cream);text-wrap:balance}
+.qmeta{margin:0;font-size:16px;color:var(--mute)}
+.qmeta b{color:var(--text);font-weight:500}
+.opts{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:680px){.opts{grid-template-columns:1fr 1fr}}
+.opt{display:flex;flex-direction:column;gap:3px;text-align:left;border:1px solid rgba(217,184,124,.34);border-radius:10px;background:rgba(227,192,133,.05);padding:13px 16px;min-width:0;transition:border-color .2s,background .2s}
+.opt strong{font-family:var(--f-display);font-weight:700;font-size:20px;color:var(--text)}
+.opt span{font-size:15px;color:var(--mute)}
+.opt.plain{font-size:18px;line-height:1.6;color:var(--text)}
+.opt:hover:not(:disabled){border-color:var(--gold);background:rgba(227,192,133,.11)}
+.opt:disabled{cursor:default}
+.opt.right{background:var(--ok-bg);border-color:var(--ok)} .opt.right strong,.opt.plain.right{color:var(--ok)}
+.opt.wrong{background:var(--bad-bg);border-color:var(--bad)} .opt.wrong strong,.opt.plain.wrong{color:var(--bad)}
+.opt.dim{opacity:.45}
+.fb{border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:12px;border:1px solid var(--line-2);background:var(--ink-2)}
+.fb.ok{border-color:rgba(165,214,174,.55);background:linear-gradient(180deg,var(--ok-bg),rgba(44,36,28,.6))}
+.fb.no{border-color:rgba(240,160,132,.55);background:linear-gradient(180deg,var(--bad-bg),rgba(44,36,28,.6))}
+.fb h3{margin:0;font-family:var(--f-display);font-size:20px;font-weight:700;letter-spacing:.06em}
+.fb.ok h3{color:var(--ok)} .fb.no h3{color:var(--bad)}
+.fb p{margin:0}
+.fb b{color:var(--cream);font-weight:600}
+.verse{border:1px solid var(--gold-line);border-radius:10px;padding:12px 18px;background:var(--gold-wash);box-shadow:inset 0 0 0 3px rgba(36,29,22,.55),inset 0 0 0 4px rgba(227,192,133,.2)}
+.verse .lab{font-size:14px;letter-spacing:.12em;color:var(--gold);font-weight:700}
+.verse .ln{margin:0;font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4vw,22px);line-height:1.85;color:var(--cream);letter-spacing:.04em}
+.quote{margin:0;font-family:var(--f-display);font-weight:600;font-size:19px;line-height:1.8;color:var(--cream)}
+.vlink{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0;font-size:16px}
+.vlink a{text-decoration:none;border-bottom:1px solid var(--gold-line)}
+.vlink a:hover{color:var(--cream);border-bottom-color:var(--cream)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid rgba(217,184,124,.4);border-radius:999px;background:rgba(227,192,133,.05);padding:7px 18px;font-size:17px;font-family:var(--f-display);font-weight:600;color:var(--text)}
+.chip:hover:not(:disabled){border-color:var(--gold);background:rgba(227,192,133,.13)}
+.chip.right{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)} .chip.wrong{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.score{font-size:16px;color:var(--mute);font-variant-numeric:tabular-nums}
+.btn{border:1px solid var(--gold);border-radius:999px;padding:10px 24px;background:linear-gradient(180deg,#e8c886,#c9a96e);color:#2c241c;font-weight:700;letter-spacing:.1em;font-size:17px;box-shadow:0 4px 12px -5px rgba(217,184,124,.6)}
+.btn:hover:not(:disabled){filter:brightness(1.08)}
+.btn.ghost{background:rgba(227,192,133,.06);color:var(--text);border-color:var(--line-2);box-shadow:none}
+.btn:disabled{opacity:.4;cursor:default}
+.olist{display:flex;flex-direction:column;gap:10px}
+.ocard{display:flex;gap:14px;align-items:flex-start;text-align:left;border:1px solid rgba(217,184,124,.32);border-radius:10px;background:rgba(227,192,133,.05);padding:12px 16px;transition:border-color .2s}
+.ocard:hover{border-color:var(--gold)}
+.ocard .n{flex:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px dashed var(--amber);font-family:var(--f-latin);font-size:19px;color:var(--amber);font-variant-numeric:tabular-nums}
+.ocard.sel{border-color:var(--line-2);background:rgba(227,192,133,.11)}
+.ocard.sel .n{background:var(--seal);border:none;color:var(--seal-ink);font-weight:600;box-shadow:inset 0 0 0 1.5px rgba(227,192,133,.7)}
+.ocard .t{min-width:0;font-family:var(--f-display);font-weight:600;font-size:19px;line-height:1.6;color:var(--text)}
+.ocard .t .score{font-family:var(--f-body);font-weight:400;font-size:15px}
+.ocard .t a{font-family:var(--f-body);font-weight:500;font-size:15px;text-decoration:none;white-space:nowrap}
+.ocard.good{background:var(--ok-bg);border-color:rgba(165,214,174,.6)} .ocard.good .n{background:var(--ok);border:none;color:#12261a}
+.ocard.badpos{background:var(--bad-bg);border-color:rgba(240,160,132,.6)} .ocard.badpos .n{background:var(--bad);border:none;color:#2a120b}
+.link{margin:-2px 0 0 48px;font-size:16px;color:var(--gold)}
+.blank{display:inline-block;min-width:2.4em;border-bottom:2px solid var(--gold);text-align:center;color:var(--gold)}
+.blank.filled{border-bottom-color:var(--ok);color:var(--ok)}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mcol{display:flex;flex-direction:column;gap:10px;min-width:0}
+.mcol h4{margin:0;font-size:15px;color:var(--mute);font-weight:500;letter-spacing:.1em}
+.mi{text-align:left;border:1px solid rgba(217,184,124,.32);border-radius:10px;background:rgba(227,192,133,.05);padding:11px 13px;font-size:17px;line-height:1.55;min-width:0;color:var(--text)}
+.mi:hover:not(:disabled){border-color:var(--gold)}
+.mi.pick{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold) inset;background:rgba(227,192,133,.14)}
+.mi.done{background:var(--ok-bg);border-color:var(--ok);opacity:.6}
+.mi.shake{background:var(--bad-bg);border-color:var(--bad)}
+.mi .src{display:block;font-size:13px;color:var(--amber);letter-spacing:.08em}
+.end{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.big{margin:0;font-family:var(--f-latin);font-weight:500;font-size:clamp(34px,7vw,46px);line-height:1.2;color:var(--gold);font-variant-numeric:tabular-nums}
+.road{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center;font-family:var(--f-display);font-size:16px;color:var(--text)}
+.road span{border:1px solid var(--line-2);border-radius:6px;padding:2px 10px;background:rgba(227,192,133,.06)}
+.road i{font-style:normal;color:var(--amber)}
+.foot{position:relative;margin-top:26px;padding-top:14px;border-top:1px dashed var(--line);color:var(--mute);font-size:15px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
+.foot i{font-family:var(--f-latin);letter-spacing:.1em;color:var(--amber)}
+@media (prefers-reduced-motion:no-preference){
+  .fb,.end{animation:rise .3s ease-out}
+  @keyframes rise{from{transform:translateY(6px)}to{transform:none}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <div class="frame">
+  <header class="top">
+    <div class="eyebrow">Mahāprajñāpāramitopadeśa · Dialectic Arena</div>
+    <div class="ttl"><h1>大智度論過招場</h1><span class="seal" aria-hidden="true">過<br>招</span></div>
+    <div class="vol"><b>卷一 · 第一品</b>僧叡釋論序</div>
+    <p class="sub">看完導讀影片，換你上場：疑者一路發問，你替僧叡接招。六關由易而難，最後把八段序文走成一條路。</p>
+    <div class="backs"><a href="https://weiwen0925.github.io/dazhidulun-0/#dz-videos">← 回大智度論導讀影片</a><a class="yt" href="https://youtu.be/g-GqcqtFp5Q" target="_blank" rel="noopener">▶ 本品導讀影片 17:30</a><a href="https://weiwen0925.github.io/dazhidulun-1/#chapter-1" target="_blank" rel="noopener">讀本・僧叡釋論序</a></div>
+  </header>
+  <nav class="stages" id="stages" aria-label="關卡"></nav>
+  <main id="main" aria-live="polite"></main>
+  <footer class="foot">
+    <span>原典與白話依「大智度論讀本」卷一站頁逐字照錄。成績只存在這台裝置的瀏覽器。</span>
+    <i>Vol. I · Chapter 1</i>
+  </footer>
+ </div>
+</div>
+<script>
+/* ───────── 影片與讀本座標：序文八段（導讀影片章節時間、讀本章次） ───────── */
+const VID='g-GqcqtFp5Q', READ='https://weiwen0925.github.io/dazhidulun-1/#chapter-1';
+const SEG={
+ 1:{n:'生者無生・其唯邪思',t:100,ch:2},
+ 2:{n:'阿含為之作・般若為之照',t:197,ch:3},
+ 3:{n:'馬鳴龍樹・作茲釋論',t:296,ch:5},
+ 4:{n:'其為論也・盡美盡善',t:401,ch:7},
+ 5:{n:'羅什入長安・逍遙園譯場',t:487,ch:8},
+ 6:{n:'三分除二・得此百卷',t:629,ch:9},
+ 7:{n:'智慧日已頹・斯人令再曜',t:720,ch:10},
+ 8:{n:'裁而略之・略其文而挹其玄',t:841,ch:12}
+};
+const ROAD=['生者無生','阿含與般若','馬鳴龍樹','盡美盡善','羅什譯場','得此百卷','智慧日已頹','略文挹玄'];
+
+/* ───────── 資料：疑者九問與僧叡的答（序文八段） ───────── */
+const A=[
+ {id:'A1',seg:1,round:'第一段',q:'萬物明明生生不息，怎麼說「生者無生」？',basis:'眼見萬物一直生起、一直變化',keep:'萬物實在地生起、有個開端',
+  name:'生者無生・其唯邪思',tag:'無生無始是物之性；紛擾出在邪思',
+  gist:'萬有看似從不斷的生起中生出，但生者無生；變化看似從事物的開端開始，但始者無始。生與始從來沒有動搖這個本性；萬象紛陳於外、悔恨憂惱生於內，問題不在萬有，而在錯誤的思惟。',
+  src:[{lab:'原典・第一段',q:'夫萬有本於生生而生，生者無生；變化兆於物始而始，始者無始。然則無生、無始，物之性也。'},{lab:'原典・第一段',q:'生、始不動於性，而萬有陳於外、悔吝生於內者，其唯邪思乎！'}],
+  next:'病根既然在邪思，接著要問：佛用什麼來對治？'},
+ {id:'A2',seg:2,round:'第二段',q:'病在邪思，佛說阿含就夠了，何必再說般若？',basis:'阿含已有一套對治的方法',keep:'只要阿含就足夠',
+  name:'阿含為作・般若為照',tag:'見邪思自起而說阿含；知滯有由惑而說般若',
+  gist:'佛看見邪思如何自己生起，所以說阿含來對治；又知道眾生執著於「有」是由於迷惑，所以再說般若來照破。一個是「作」，一個是「照」。',
+  src:[{lab:'原典・第二段',q:'正覺有以見邪思之自起故，阿含為之作；知滯有之由惑故，般若為之照。'}],
+  next:'般若是「照」；可是這個照，能用言語、心智拿到手嗎？'},
+ {id:'A3',seg:2,ch:4,round:'第二段',q:'般若既然是照，用言語講清楚、用心智推量，不就得到了？',basis:'凡事都說得出、想得通',keep:'言語與心智到得了般若',
+  name:'言求乖深・智測失旨',tag:'照本希夷，理超文表，趣絕思境',
+  gist:'般若所照的，幽微難見，像無邊的大水；道理超過文字，旨趣斷絕思量。用言語去求，就背離它的深；用心智去測，就失去它的旨。二乘在三藏裡跌撞、雜學像魚躍不過龍門，都是這個緣故。',
+  src:[{lab:'原典・第二段',q:'然而照本希夷，津涯浩汗，理超文表，趣絕思境。以言求之，則乖其深；以智測之，則失其旨。'},{lab:'原典・第二段',q:'二乘所以顛沛於三藏，雜學所以曝鱗於龍門者，不其然乎！'}],
+  next:'言語、心智都到不了；佛滅之後，誰來傳般若？馬鳴與龍樹的做法，為什麼不一樣？'},
+ {id:'A4',seg:3,round:'第三段',q:'馬鳴振起遺風就夠了，龍樹何必入龍宮、造大論？',basis:'馬鳴在正法之餘，振起遺風就弘揚開來',keep:'一種弘法方式通用各個時代',
+  name:'正餘易弘・像末多端',tag:'馬鳴直振遺風；龍樹寄跡凡夫、假照龍宮，作茲釋論',
+  gist:'馬鳴出現在正法將盡之時，正法餘緒還容易弘揚，振起、擦亮遺風就夠了。龍樹生在像法之末，頭緒繁多，於是託身凡夫、漸次開悟眾生；又入龍宮，磨亮探求玄義的智慧，這才依準佛的智慧經典造了這部釋論——開闢平坦大道，讓妄見不必走遠就自己回正。',
+  src:[{lab:'原典・第三段',q:'是以馬鳴起於正法之餘，龍樹生於像法之末。正餘易弘故，直振其遺風瑩拂而已。'},{lab:'原典・第三段',q:'像末多端故，乃寄跡凡夫示悟物以漸，又假照龍宮以朗搜玄之慧，託聞幽祕以窮微言之妙，爾乃憲章智典作茲釋論。'}],
+  next:'龍樹造了論；這部論怎麼寫，才讓千年後的人讀得懂？'},
+ {id:'A5',seg:4,round:'第四段',q:'寫論何必先列各家異說？直接講正確答案不就好了？',basis:'正確的說法只要一個',keep:'只立一家之說',
+  name:'標眾異・舉無執',tag:'初標眾異以盡美，終舉無執以盡善',
+  gist:'這部論一開頭，一定先把各種不同的說法都標列出來，這叫盡美；到最後，舉出無所執著，這叫盡善。經文解釋不盡，就另立論議說明；論議還沒辨清，就折中論定。先盡列眾說，再歸於無執，不落兩邊。',
+  src:[{lab:'原典・第四段',q:'其為論也，初辭擬之，必標眾異以盡美；卒成之終，則舉無執以盡善。釋所不盡，則立論以明之；論其未辯，則寄折中以定之。'}],
+  next:'論在天竺寫成了；它怎麼來到長安，又為什麼要大開譯場？'},
+ {id:'A6',seg:5,round:'第五段',q:'羅什與秦王晤談已經很深，何必再集五百多人來譯？',basis:'兩人心意相契，終日研討',keep:'兩人心契就夠了',
+  name:'弘兼忘之慧・集逍遙園',tag:'恨獨符之心不曠，惜津梁之勢未普',
+  gist:'兩人晤談雖深，可惜這份心契只在兩人之間，未能廣被；窮究的要義雖玄，可惜度人的橋樑還沒普及。於是召集京城研習義理的沙門，與公卿中意氣相投的五百多人，會集在渭水邊的逍遙園堂，依梵本考正名相，為後來的人鋪平道路。',
+  src:[{lab:'原典・第五段',q:'又以晤言之功雖深，而恨獨符之心不曠；造盡之要雖玄，而惜津梁之勢未普。'},{lab:'原典・第五段',q:'乃集京師義業沙門，命公卿賞契之士五百餘人，集於渭濱逍遙園堂。'}],
+  next:'譯場開了；可是梵本那麼龐大，為什麼只有一百卷？'},
+ {id:'A7',seg:6,round:'第六段',q:'梵本十萬偈、三百二十萬言，只譯成百卷，不就殘缺了？',basis:'刪去了三分之二',keep:'字字譯全才算完整',
+  name:'三分除二・朗然可見',tag:'梵夏既乖、煩簡有異；文雖刪略，玄旨可見',
+  gist:'論的略本有十萬偈，每偈三十二字，共三百二十萬言。梵語和漢語體例不同，又有繁簡的差別，於是刪去三分之二，成為這一百卷。在這三十萬言裡，深玄的章句、婉曲的旨趣都清楚可見，歸途直達，不再有走錯方向的疑惑。',
+  src:[{lab:'原典・第六段',q:'論之略本有十萬偈，偈有三十二字，并三百二十萬言。梵夏既乖，又有煩簡之異，三分除二，得此百卷。'},{lab:'原典・第六段',q:'於大智三十萬言，玄章婉旨，朗然可見，歸途直達，無復惑趣之疑，以文求之無間然矣。'}],
+  next:'回頭看天竺怎麼看待造論的人：馬鳴、龍樹為什麼被宗之若佛？'},
+ {id:'A8',seg:7,round:'第七段',q:'天竺為馬鳴、龍樹立廟，宗之若佛，不是推崇太過？',basis:'造論的人畢竟不是佛',keep:'造論的人不該受這樣的尊崇',
+  name:'智慧日頹・斯人再曜',tag:'虛言與實教並興，嶮徑與夷路爭轍，非二匠孰能正之',
+  gist:'那時邪法盛行，虛妄的言說和真實的教法一起流行，險路和平坦大道爭著並行，初學的人被帶偏，求道的人被迷惑；除了這兩位大匠，誰能匡正？所以天竺歌頌：智慧的太陽已經西沉，是這個人讓它再放光明。',
+  src:[{lab:'原典・第七段',q:'虛言與實教並興，嶮徑與夷路爭轍，始進者化之而流離，向道者惑之而播越，非二匠其孰與正之！'},{lab:'原典・第七段・天竺歌詠',v:['智慧日已頹，斯人令再曜；','世昏寢已久，斯人悟令覺。']}],
+  next:'讚歎之後，僧叡回到手上這部譯本：譯得不盡，讀者該怎麼讀？'},
+ {id:'A9',seg:8,round:'第八段',q:'羅什自己說秦語只通大略，譯文又不修飾，這樣讀得準嗎？',basis:'言語不能互相會意',keep:'譯文要修飾到無可挑剔',
+  name:'案譯而書・略文挹玄',tag:'不停筆爭是，不簡而便之；略其文而挹其玄',
+  gist:'停筆爭辯，整天也爭不出結果；只求簡便，又怕落入穿鑿的譏評。所以只依原譯如實書寫，不加修飾。最後一句是整篇序的囑咐：希望明悟的讀者，略過文字，汲取其中的玄旨。',
+  src:[{lab:'原典・第八段',q:'進欲停筆爭是，則交競終日卒無所成；退欲簡而便之，則負傷於穿鑿之譏以二三。唯案譯而書，都不備飾。'},{lab:'原典・第八段',q:'幸冀明悟之賢，略其文而挹其玄也！'}],
+  next:''}
+];
+
+/* ───────── 資料：難句白話（正解依讀本「白話翻譯表」原句；錯項為常見誤讀） ───────── */
+const W=[
+ {seg:1,q:'萬有陳於外、悔吝生於內',a:'萬象紛陳於外、悔恨憂惱生於內心',x:['萬物排列在外，後悔與吝嗇是天生的性格','災禍從外面來，吝嗇從家裡生','萬物都在心內生起，外面什麼也沒有']},
+ {seg:2,q:'照本希夷，津涯浩汗',a:'幽微難見、境界如汪洋無涯',x:['依照經本讀誦，文義浩繁','般若的光微弱，只照到岸邊','渡口邊的人汗流浹背']},
+ {seg:2,q:'理超文表，趣絕思境',a:'道理超越文字所能表達，旨趣斷絕一切思量所能到達',x:['道理寫在文字表面，趣味要靠思考','只要文字寫得好，就能想通道理','道理超出表格，趣味絕妙']},
+ {seg:2,q:'以言求之，則乖其深；以智測之，則失其旨',a:'用語言去求它反而背離其深妙，用心智去測它反而失卻其本旨',x:['用語言去求才能得其深妙，用心智去測才能得其本旨','語言太深奧，心智太乖巧','先用語言求，再用心智測，就能得到']},
+ {seg:2,q:'雜學所以曝鱗於龍門',a:'外道雜學之所以如魚曝鱗於龍門（躍不過去）',x:['雜學像鯉魚躍過龍門，化而為龍','雜學在龍門講經，炫耀才學','雜學把經書曬在龍門上']},
+ {seg:3,q:'正餘易弘故，直振其遺風瑩拂而已',a:'直接振起、擦亮佛陀遺留的風範就夠了',x:['直接改寫佛陀的教法','把遺風吹散，另立新說','只在風中拂拭灰塵，別無作為']},
+ {seg:3,q:'寄跡凡夫示悟物以漸',a:'託身凡夫之相、循序漸進地開悟眾生',x:['寄信給凡夫，一次把道理說盡','隱居山林，不與凡夫往來','以神通示現，令眾生頓時開悟']},
+ {seg:3,q:'假照龍宮以朗搜玄之慧',a:'藉入龍宮閱藏磨亮探幽的智慧',x:['假裝去過龍宮，以取信於人','借龍宮的燈火照明讀經','到龍宮搜尋寶物']},
+ {seg:3,q:'爾乃憲章智典作茲釋論',a:'依準佛的智慧經典，造出這部《釋論》',x:['制定法律條文，寫成這部論','把智慧經典改寫成國家典章','替國家的典章作注解']},
+ {seg:3,q:'其辯實相也，則使妄見之惑不遠而自復',a:'使虛妄知見的迷惑不必走遠就能自行回正',x:['讓妄見遠離，永遠不再回來','讓迷惑的人走到遠方再回頭','讓妄見在不遠處消失又復生']},
+ {seg:5,q:'常杖茲論為淵鏡憑高',a:'常以這部論作為深鑑高台',x:['常拄著這部論當手杖走路','常把這部論藏在深淵裡','常用這部論去打擊異說']},
+ {seg:5,q:'秦王虛襟既已蘊在',a:'秦王（姚興）早已虛心期待、蘊蓄敬慕',x:['秦王的衣襟空空，十分清貧','秦王心中早有疑慮','秦王已經虛位讓賢']},
+ {seg:5,q:'而恨獨符之心不曠',a:'遺憾只有兩人心契、未能廣被',x:['恨自己孤獨，心胸不夠開闊','怨恨別人與自己意見不合','遺憾符命不在，國運不廣']},
+ {seg:5,q:'鑾輿佇駕於洪涘，禁禦息警於林間',a:'天子車駕駐臨渭水之濱，禁衛在林間止息戒備',x:['天子的車駕在洪水中翻覆，禁衛在林間警戒','鑾鈴響起，禁衛四處巡邏','天子駕車遠行，禁止百姓入林']},
+ {seg:6,q:'梵夏既乖，又有煩簡之異',a:'梵語與漢語體例既不同、又有繁簡之別',x:['梵本與夏本互相違背，內容不同','夏天譯經有誤，改到冬天才簡化','梵僧與漢僧意見不合，又嫌麻煩']},
+ {seg:6,q:'三分除二，得此百卷',a:'刪去三分之二，得成這一百卷',x:['分成三份，取其中兩份譯出','三人分工，其中兩人負責刪改','先除以二再乘以三，算出百卷']},
+ {seg:7,q:'嶮徑與夷路爭轍',a:'險路與正道爭相並行',x:['險路與平路合成一條車轍','走險路的人與外族爭奪車道','平路上車輛太多，只好改走險路']},
+ {seg:7,q:'智慧日已頹，斯人令再曜',a:'智慧的太陽已西沉，是這人讓它重新放光',x:['智慧一天天衰退，這人也無能為力','太陽下山之後，這人點起了燈火','智慧的日子已經過去，這人只能回憶']},
+ {seg:7,q:'功格十地，道侔補處',a:'功齊十地、道與一生補處（候補佛位）的菩薩相等',x:['功勞超過十地菩薩，道行勝過補處菩薩','功德登記在十塊地上，道路通往補給處','在十地建功立業，在補處修道']},
+ {seg:8,q:'法師以秦人好簡故，裁而略之',a:'羅什法師因漢地人喜好簡要，所以加以裁剪節略',x:['法師嫌秦人簡陋，所以多加解釋','法師因為紙張不夠，只好刪減','法師自己喜歡簡要，刪去不喜歡的部分']},
+ {seg:8,q:'苟言不相喻，則情無由比',a:'倘若語言不能互相會意，情意就無從對應',x:['說話不用比喻，感情就無法比較','如果不說話，情感就無法表達','言語若太直白，情意就顯得淺薄']},
+ {seg:8,q:'唯案譯而書，都不備飾',a:'只依原譯如實書寫，全不加修飾',x:['只依案件判決書寫，全部備齊','譯完再修飾，力求文采','只譯案頭的經文，其餘都不翻']},
+ {seg:8,q:'幸冀明悟之賢，略其文而挹其玄也',a:'但願明達通悟的賢者，能略過文字的粗疏，而汲取其中的玄旨',x:['但願賢者刪掉玄妙的部分，只留文字','但願賢者把文字縮短，玄義也隨之減少','但願賢者省略文字，把玄理讓給別人']}
+];
+
+/* ───────── 資料：原文填空（序文名句，逐字照錄） ───────── */
+const F=[
+ {seg:1,v:['夫萬有本於生生而生，生者無生；','變化兆於物始而始，始者無始。'],ln:0,ans:'無生',opts:['無生','有生','自生','再生'],note:'生者無生'},
+ {seg:1,v:['然則無生、無始，物之性也。'],ln:0,ans:'性',opts:['性','相','始','理'],note:'本品樞紐句'},
+ {seg:1,v:['生、始不動於性，而萬有陳於外、','悔吝生於內者，其唯邪思乎！'],ln:1,ans:'邪思',opts:['邪思','無明','妄想','愛欲'],note:'病根在邪思'},
+ {seg:2,v:['正覺有以見邪思之自起故，阿含為之作；','知滯有之由惑故，般若為之照。'],ln:0,ans:'作',opts:['作','照','說','治'],note:'阿含為之作'},
+ {seg:2,v:['正覺有以見邪思之自起故，阿含為之作；','知滯有之由惑故，般若為之照。'],ln:1,ans:'照',opts:['照','作','破','明'],note:'般若為之照'},
+ {seg:2,v:['以言求之，則乖其深；','以智測之，則失其旨。'],ln:0,ans:'深',opts:['深','旨','義','真'],note:'言求乖深'},
+ {seg:2,v:['二乘所以顛沛於三藏，','雜學所以曝鱗於龍門者，不其然乎！'],ln:1,ans:'龍門',opts:['龍門','龍宮','山門','三藏'],note:'雜學曝鱗'},
+ {seg:3,v:['是以馬鳴起於正法之餘，','龍樹生於像法之末。'],ln:1,ans:'像法',opts:['像法','正法','末法','佛法'],note:'正餘・像末'},
+ {seg:3,v:['其開夷路也，則令大乘之駕方軌而直入；','其辯實相也，則使妄見之惑不遠而自復。'],ln:1,ans:'自復',opts:['自復','直入','自滅','自明'],note:'論的兩種功用'},
+ {seg:4,v:['初辭擬之，必標眾異以盡美；','卒成之終，則舉無執以盡善。'],ln:1,ans:'無執',opts:['無執','眾異','實相','定論'],note:'盡美盡善'},
+ {seg:4,v:['釋所不盡，則立論以明之；','論其未辯，則寄折中以定之。'],ln:1,ans:'折中',opts:['折中','經文','梵本','眾議'],note:'立論・折中'},
+ {seg:5,v:['常杖茲論為淵鏡憑高、致以明宗。'],ln:0,ans:'淵鏡',opts:['淵鏡','明燈','寶筏','津梁'],note:'羅什以此論明宗'},
+ {seg:5,v:['乃集京師義業沙門，命公卿賞契之士五百餘人，','集於渭濱逍遙園堂。'],ln:1,ans:'逍遙園',opts:['逍遙園','長安宮','上林苑','姑臧城'],note:'譯場所在'},
+ {seg:6,v:['梵夏既乖，又有煩簡之異，','三分除二，得此百卷。'],ln:1,ans:'三分除二',opts:['三分除二','十取其一','半譯半略','備譯其文'],note:'百卷的由來'},
+ {seg:7,v:['智慧日已頹，斯人令再曜；','世昏寢已久，斯人悟令覺。'],ln:0,ans:'再曜',opts:['再曜','再明','重照','再起'],note:'天竺歌詠'},
+ {seg:8,v:['法師以秦人好簡故，裁而略之。'],ln:0,ans:'簡',opts:['簡','繁','文','質'],note:'裁而略之'},
+ {seg:8,v:['唯案譯而書，都不備飾。'],ln:0,ans:'備飾',opts:['備飾','刪略','增益','爭是'],note:'翻譯的取捨'},
+ {seg:8,v:['幸冀明悟之賢，略其文而挹其玄也！'],ln:0,ans:'玄',opts:['玄','義','理','旨'],note:'整篇序的囑咐'}
+];
+
+/* ───────── 資料：關鍵提醒（原典句 → 中觀概念；概念與說明依讀本「白話翻譯表」中觀欄） ───────── */
+const K=[
+ {seg:1,q:'生者無生',a:'不生（無生）',d:'「生者無生」即八不中道之首：諸法緣起、無自性之生，故不生不滅。',o:['假名施設','般若光明','善巧方便']},
+ {seg:1,q:'萬有陳於外、悔吝生於內者，其唯邪思乎！',a:'破戲論／顛倒',d:'妄想分別（戲論）是生死根，正是中觀所破。',o:['二諦並用','般若為鏡','假名施設']},
+ {seg:2,q:'阿含為之作……般若為之照',a:'二諦並用',d:'阿含（世俗諦·對治）、般若（勝義諦·照空），依二諦而說法。',o:['中道·無所執','破戲論／顛倒','隨機方便']},
+ {seg:2,q:'理超文表，趣絕思境。以言求之，則乖其深',a:'實相離言',d:'實相離四句、絕百非，非言智可及。',o:['般若光明','二諦並用','善巧方便']},
+ {seg:2,q:'二乘所以顛沛於三藏，雜學所以曝鱗於龍門者',a:'不達畢竟空之失',d:'二乘、雜學顛沛曝鱗，皆因滯於有見、未證空義。',o:['般若光明','隨機方便','般若為鏡']},
+ {seg:3,q:'寄跡凡夫示悟物以漸',a:'善巧方便',d:'「寄跡凡夫、假照龍宮」，以方便漸引眾生而成《釋論》。',o:['諸法實相','般若正觀','不生（無生）']},
+ {seg:3,q:'其辯實相也，則使妄見之惑不遠而自復',a:'諸法實相',d:'顯中道實相，虛妄見自正。',o:['善巧方便','不達畢竟空之失','般若為鏡']},
+ {seg:4,q:'必標眾異以盡美……則舉無執以盡善',a:'中道·無所執',d:'「標眾異盡美、舉無執盡善、折中定之」：不落兩邊的中道論法。',o:['二諦並用','破邪顯正','般若光明']},
+ {seg:5,q:'常杖茲論為淵鏡憑高、致以明宗',a:'般若為鏡',d:'以般若正觀為準繩明宗。',o:['破戲論／顛倒','隨機方便','不生（無生）']},
+ {seg:5,q:'相與弘兼忘之慧',a:'能所兼忘·無所得',d:'能觀所觀雙泯，即無所得般若。',o:['破邪顯正','假名施設','善巧方便']},
+ {seg:6,q:'三分除二，得此百卷',a:'假名施設',d:'文字乃假名，隨宜刪略而不壞其義。',o:['般若光明','實相離言','不生（無生）']},
+ {seg:6,q:'歸途直達，無復惑趣之疑',a:'般若正觀',d:'依正觀直趣實相、不迷歧途。',o:['破戲論／顛倒','隨機方便','不達畢竟空之失']},
+ {seg:7,q:'智慧日已頹，斯人令再曜',a:'般若光明',d:'般若如日，照破無明昏寢。',o:['假名施設','二諦並用','中道·無所執']},
+ {seg:7,q:'虛言與實教並興，嶮徑與夷路爭轍',a:'破邪顯正',d:'「邪法盛、虛實並興、嶮夷爭轍」，非二匠不能正之。',o:['假名施設','能所兼忘·無所得','不生（無生）']},
+ {seg:8,q:'法師以秦人好簡故，裁而略之',a:'隨機方便',d:'應機刪略，方便攝化。',o:['諸法實相','般若光明','實相離言']},
+ {seg:8,q:'略其文而挹其玄',a:'依義不依語',d:'「唯案譯而書、略文挹玄」：不執文字，取其玄旨。',o:['二諦並用','般若光明','破邪顯正']}
+];
+
+/* ───────── 工具 ───────── */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const CN='零一二三四五六七八九十';
+const cn=n=>n<=10?CN[n]:(n<20?'十'+CN[n-10]:CN[Math.floor(n/10)]+'十'+(n%10?CN[n%10]:''));
+const mmss=t=>Math.floor(t/60)+':'+String(t%60).padStart(2,'0');
+const store={get(k,d){try{const v=localStorage.getItem('dzgz1:'+k);return v==null?d:JSON.parse(v);}catch(e){return d;}},set(k,v){try{localStorage.setItem('dzgz1:'+k,JSON.stringify(v));}catch(e){}}};
+function verseHTML(s){
+  if(s.v) return `<div class="verse"><div class="lab">${esc(s.lab)}</div>${s.v.map(l=>`<p class="ln">${esc(l)}</p>`).join('')}</div>`;
+  return `<div class="verse"><div class="lab">${esc(s.lab)}</div><p class="quote">「${esc(s.q)}」</p></div>`;
+}
+function vlink(seg,ch){
+  const s=SEG[seg], c=ch||s.ch;
+  return `<p class="vlink"><a href="https://youtu.be/${VID}?t=${s.t}" target="_blank" rel="noopener">▶ 回看影片・第${cn(seg)}段 ${mmss(s.t)}</a><a href="${READ}-${c}" target="_blank" rel="noopener">讀本・第${cn(c)}章 →</a></p>`;
+}
+const STAGES=[
+ {k:'o1',t:'序脈排序',d:'排出九個疑問'},
+ {k:'d1',t:'過招',d:'疑者出招，你接'},
+ {k:'w1',t:'難句白話',d:'典故一句句拆'},
+ {k:'f1',t:'原文填空',d:'序文名句'},
+ {k:'k1',t:'關鍵提醒',d:'原典↔中觀'},
+ {k:'m',t:'配對快打',d:'疑問↔答招'}
+];
+let S={stage:0,best:store.get('best',{}),sub:null};
+
+function renderNav(){
+  $('#stages').innerHTML=STAGES.map((s,i)=>{
+    const b=S.best[s.k];
+    const mark=b==null?'':(s.k==='m'?`最佳 ${b} 秒`:`最佳 ${b}`);
+    return `<button class="stg" data-i="${i}" aria-current="${i===S.stage}"><b>第${cn(i+1)}關</b><span>${s.t}</span><em>${mark||s.d}</em></button>`;
+  }).join('');
+  document.querySelectorAll('.stg').forEach(b=>b.onclick=()=>go(+b.dataset.i));
+}
+function go(i){S.stage=i;S.sub=null;try{history.replaceState(null,'','#'+STAGES[i].k);}catch(e){}renderNav();render();window.scrollTo({top:0,behavior:'smooth'});}
+function saveBest(k,v,lowerBetter){
+  const o=S.best[k];
+  if(o==null||(lowerBetter?v<o:(+String(v).split('/')[0])>(+String(o).split('/')[0]))){S.best[k]=v;store.set('best',S.best);}
+}
+function render(){
+  const k=STAGES[S.stage].k;
+  if(k==='o1') orderStage();
+  if(k==='d1') duelStage();
+  if(k==='w1') choiceStage('w1');
+  if(k==='f1') fillStage();
+  if(k==='k1') choiceStage('k1');
+  if(k==='m') matchStage();
+}
+
+/* ───────── 第一關：序脈排序 ───────── */
+function orderStage(){
+  const list=A;
+  if(!S.sub) S.sub={pool:shuffle(list.map(x=>x.id)),seq:[],checked:false};
+  const st=S.sub, byId=Object.fromEntries(list.map(x=>[x.id,x]));
+  const head=`<div class="ptitle"><h2>序脈・疑者九問</h2><p>${list.length} 張卡</p></div><p class="hint">僧叡的序文，一段接一段回答讀者心裡的疑問：前一段的答案，引出下一段的問題。依序文先後點選排序。</p>`;
+  if(!st.checked){
+    const cards=st.pool.map(id=>{const p=st.seq.indexOf(id);return `<button class="ocard${p>=0?' sel':''}" data-id="${id}"><span class="n">${p>=0?p+1:''}</span><span class="t">${esc(byId[id].q)}</span></button>`;}).join('');
+    $('#main').innerHTML=`<section class="panel">${head}<div class="olist">${cards}</div>
+      <div class="bar"><span class="score">已排 ${st.seq.length} / ${list.length}　點已排的卡可退回</span>
+      <span style="display:flex;gap:8px"><button class="btn ghost" id="reset">重排</button><button class="btn" id="check" ${st.seq.length<list.length?'disabled':''}>核對</button></span></div></section>`;
+    document.querySelectorAll('.ocard').forEach(b=>b.onclick=()=>{
+      const id=b.dataset.id,p=st.seq.indexOf(id);
+      if(p>=0) st.seq=st.seq.slice(0,p); else st.seq.push(id);
+      render();
+    });
+    $('#reset').onclick=()=>{st.seq=[];render();};
+    $('#check').onclick=()=>{st.checked=true;render();};
+    return;
+  }
+  const right=list.map(x=>x.id); let ok=0;
+  const rows=right.map((id,i)=>{
+    const good=st.seq[i]===id; if(good) ok++;
+    const x=byId[id], s=SEG[x.seg];
+    const yours=good?'':`<span class="score">（你排在第 ${st.seq.indexOf(id)+1} 位）</span>`;
+    const link=i<right.length-1&&x.next?`<p class="link">↓ ${esc(x.next)}</p>`:'';
+    return `<div class="ocard ${good?'good':'badpos'}"><span class="n">${i+1}</span><span class="t">${esc(x.q)} ${yours}<br><span class="score">${esc(x.round)}・${esc(s.n)}　放不下：${esc(x.keep)}</span>　<a href="https://youtu.be/${VID}?t=${s.t}" target="_blank" rel="noopener">▶ ${mmss(s.t)}</a></span></div>${link}`;
+  }).join('');
+  saveBest('o1',`${ok}/${list.length}`);
+  $('#main').innerHTML=`<section class="panel">${head}
+    <div class="end"><p class="big">${ok} / ${list.length}</p><p class="hint">綠色是位置正確，紅色是排錯的位置。每兩張卡之間的金字，就是序文「為什麼下一段這樣接」。</p></div>
+    <div class="olist">${rows}</div>
+    <div class="bar"><button class="btn ghost" id="again">再排一次</button><button class="btn" id="nextStage">下一關</button></div></section>`;
+  $('#again').onclick=()=>{S.sub=null;render();};
+  $('#nextStage').onclick=()=>go(S.stage+1);
+  renderNav();
+}
+
+/* ───────── 第二關：疑者出招・你替僧叡接 ───────── */
+function duelStage(){
+  const list=A;
+  if(!S.sub) S.sub={i:0,phase:'ask',score:0,opts:null,pick:null};
+  const st=S.sub;
+  if(st.i>=list.length) return duelEnd();
+  const x=list[st.i];
+  if(!st.opts) st.opts=shuffle([x.id,...shuffle(list.filter(y=>y.id!==x.id).map(y=>y.id)).slice(0,3)]);
+  const byId=Object.fromEntries(list.map(y=>[y.id,y]));
+  const prev=st.i>0?list[st.i-1].next:'';
+  let html=`<section class="panel"><div class="ptitle"><h2>過招・僧叡釋論序</h2><p>第 ${st.i+1} / ${list.length} 回合</p></div>
+   ${prev?`<p class="retreat">${esc(prev)}</p>`:''}
+   <div class="qrow"><div class="pill"><i>第${cn(st.i+1)}問</i><small>${esc(x.round)}</small></div><div class="qt"><p class="qbig">${esc(x.q)}</p><p class="qmeta">疑從哪來：<b>${esc(x.basis)}</b>｜放不下：<b>${esc(x.keep)}</b></p></div></div>
+   <p class="hint">序文用哪一招接住這個疑問？</p>
+   <div class="opts">${st.opts.map(id=>{const o=byId[id];let c='';
+     if(st.phase!=='ask'){ if(id===x.id) c='right'; else if(id===st.pick) c='wrong'; else c='dim'; }
+     return `<button class="opt ${c}" data-id="${id}" ${st.phase!=='ask'?'disabled':''}><strong>${esc(o.name)}</strong><span>${esc(o.tag)}</span></button>`;}).join('')}</div>`;
+  if(st.phase!=='ask'){
+    const good=st.pick===x.id, w=byId[st.pick];
+    html+=`<div class="fb ${good?'ok':'no'}"><h3>${good?'接得正著':'這一招接偏了'}</h3>
+      ${good?'':`<p>「${esc(w.name)}」接的是另一個疑問：${esc(w.q)} 這一問，疑者放不下的是「${esc(x.keep)}」。正解是「${esc(x.name)}」。</p>`}
+      <p><b>序文怎麼接：</b>${esc(x.gist)}</p>${x.src.map(verseHTML).join('')}${vlink(x.seg,x.ch)}</div>
+      <div class="bar"><span class="score">接對 ${st.score}</span><button class="btn" id="nx">${st.i===list.length-1?'看結果':'下一回合'}</button></div>`;
+  } else {
+    html+=`<div class="bar"><span class="score">接對 ${st.score}</span></div>`;
+  }
+  html+=`</section>`;
+  $('#main').innerHTML=html;
+  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{st.pick=b.dataset.id;if(st.pick===x.id)st.score++;st.phase='answered';render();});
+  const nx=$('#nx'); if(nx) nx.onclick=()=>{st.i++;st.phase='ask';st.opts=null;st.pick=null;render();window.scrollTo({top:0,behavior:'smooth'});};
+}
+function duelEnd(){
+  const st=S.sub,n=A.length;
+  saveBest('d1',`${st.score}/${n}`);
+  $('#main').innerHTML=`<section class="panel"><div class="ptitle"><h2>過招結束</h2></div>
+   <div class="end"><p class="big">接對 ${st.score} / ${n}</p>
+   <p class="hint">九個疑問一路走完：從萬有的無生，走到手上這部譯本。下面是序文八段走成的路。</p>
+   <div class="road">${ROAD.map((r,i)=>`<span>${esc(r)}</span>${i<ROAD.length-1?'<i>→</i>':''}`).join('')}</div>
+   <p class="hint">請帶走頭尾兩句：「無生、無始，物之性也」；「略其文而挹其玄」。</p></div>
+   <div class="bar"><button class="btn ghost" id="again">再打一輪</button><button class="btn" id="nextStage">下一關</button></div></section>`;
+  $('#again').onclick=()=>{S.sub=null;render();};
+  $('#nextStage').onclick=()=>go(S.stage+1);
+  renderNav();
+}
+
+/* ───────── 第三、五關：難句白話／關鍵提醒（四選一） ───────── */
+function choiceStage(key){
+  const isW=key==='w1', list=isW?W:K, N=10;
+  const title=isW?'難句白話':'關鍵提醒';
+  if(!S.sub) S.sub={list:shuffle(list.map((_,i)=>i)).slice(0,N),i:0,score:0,pick:null,opts:null};
+  const st=S.sub;
+  if(st.i>=st.list.length){
+    saveBest(key,`${st.score}/${st.list.length}`);
+    $('#main').innerHTML=`<section class="panel"><div class="ptitle"><h2>${title}結束</h2></div><div class="end"><p class="big">${st.score} / ${st.list.length}</p><p class="hint">每輪從 ${list.length} 題中隨機抽 ${N} 題，多玩幾輪就能全部遇到。${isW?'正解都是讀本「白話翻譯表」的原句。':'中觀概念與說明都出自讀本「白話翻譯表」的中觀欄，也是影片裡每段的關鍵提醒。'}</p></div>
+      <div class="bar"><button class="btn ghost" id="again">再來一輪</button><button class="btn" id="nextStage">下一關</button></div></section>`;
+    $('#again').onclick=()=>{S.sub=null;render();};$('#nextStage').onclick=()=>go(S.stage+1);renderNav();return;
+  }
+  const it=list[st.list[st.i]];
+  if(!st.opts) st.opts=shuffle([it.a,...(isW?it.x:it.o)]);
+  let html=`<section class="panel"><div class="ptitle"><h2>${title}</h2><p>第 ${st.i+1} / ${st.list.length} 題</p></div>
+    <p class="hint">${isW?'這一句原典，白話是哪一個？錯的選項都是常見的誤讀。':'這一句原典，指向哪一個中觀概念？'}</p>
+    <div class="verse"><div class="lab">原典・第${cn(it.seg)}段・${esc(SEG[it.seg].n)}</div><p class="quote">「${esc(it.q)}」</p></div>
+    <div class="opts">${st.opts.map((o,j)=>{let c='';
+      if(st.pick!=null){ if(o===it.a) c='right'; else if(o===st.pick) c='wrong'; else c='dim'; }
+      return isW?`<button class="opt plain ${c}" data-j="${j}" ${st.pick!=null?'disabled':''}>${esc(o)}</button>`
+               :`<button class="opt ${c}" data-j="${j}" ${st.pick!=null?'disabled':''}><strong>${esc(o)}</strong></button>`;}).join('')}</div>`;
+  if(st.pick!=null){
+    const good=st.pick===it.a;
+    html+=`<div class="fb ${good?'ok':'no'}"><h3>${good?'對了':'不是這個意思'}</h3>
+      ${isW?`<p><b>讀本白話：</b>${esc(it.a)}</p>`:`<p><b>${esc(it.a)}</b>——${esc(it.d)}</p>`}${vlink(it.seg)}</div>
+      <div class="bar"><span class="score">答對 ${st.score}</span><button class="btn" id="nx">${st.i===st.list.length-1?'看結果':'下一題'}</button></div>`;
+  } else html+=`<div class="bar"><span class="score">答對 ${st.score}</span></div>`;
+  html+=`</section>`;
+  $('#main').innerHTML=html;
+  document.querySelectorAll('.opt[data-j]').forEach(b=>b.onclick=()=>{st.pick=st.opts[+b.dataset.j];if(st.pick===it.a)st.score++;render();});
+  const nx=$('#nx'); if(nx) nx.onclick=()=>{st.i++;st.pick=null;st.opts=null;render();window.scrollTo({top:0,behavior:'smooth'});};
+}
+
+/* ───────── 第四關：原文填空 ───────── */
+function fillStage(){
+  if(!S.sub) S.sub={list:shuffle(F.map((_,i)=>i)).slice(0,10),i:0,score:0,pick:null,opts:null};
+  const st=S.sub;
+  if(st.i>=st.list.length){
+    saveBest('f1',`${st.score}/${st.list.length}`);
+    $('#main').innerHTML=`<section class="panel"><div class="ptitle"><h2>原文填空結束</h2></div><div class="end"><p class="big">${st.score} / ${st.list.length}</p><p class="hint">每輪從 ${F.length} 句中隨機抽十句，多玩幾輪就能全部遇到。</p></div>
+      <div class="bar"><button class="btn ghost" id="again">再來一輪</button><button class="btn" id="nextStage">下一關</button></div></section>`;
+    $('#again').onclick=()=>{S.sub=null;render();};$('#nextStage').onclick=()=>go(S.stage+1);renderNav();return;
+  }
+  const f=F[st.list[st.i]];
+  if(!st.opts) st.opts=shuffle(f.opts);
+  const lines=f.v.map((l,j)=>{
+    if(j!==f.ln) return `<p class="ln">${esc(l)}</p>`;
+    const p=l.indexOf(f.ans);
+    const fill=st.pick?`<span class="blank filled">${esc(f.ans)}</span>`:`<span class="blank">　</span>`;
+    return `<p class="ln">${esc(l.slice(0,p))}${fill}${esc(l.slice(p+f.ans.length))}</p>`;
+  }).join('');
+  let html=`<section class="panel"><div class="ptitle"><h2>原文填空</h2><p>第 ${st.i+1} / ${st.list.length} 句</p></div>
+    <p class="hint">選出空格裡的字。原典一字不改，填的是僧叡序文的原文。</p>
+    <div class="verse"><div class="lab">原典・第${cn(f.seg)}段・${esc(SEG[f.seg].n)}</div>${lines}</div>
+    <div class="chips">${st.opts.map(o=>{let c='';if(st.pick){if(o===f.ans)c='right';else if(o===st.pick)c='wrong';}
+      return `<button class="chip ${c}" data-o="${esc(o)}" ${st.pick?'disabled':''}>${esc(o)}</button>`;}).join('')}</div>`;
+  if(st.pick){
+    const good=st.pick===f.ans;
+    html+=`<div class="fb ${good?'ok':'no'}"><h3>${good?'對了':'不是「'+esc(st.pick)+'」'}</h3><p>這一句在序文裡的位置：<b>${esc(f.note)}</b>。</p>${vlink(f.seg)}</div>
+      <div class="bar"><span class="score">答對 ${st.score}</span><button class="btn" id="nx">${st.i===st.list.length-1?'看結果':'下一句'}</button></div>`;
+  } else html+=`<div class="bar"><span class="score">答對 ${st.score}</span></div>`;
+  html+=`</section>`;
+  $('#main').innerHTML=html;
+  document.querySelectorAll('.chip[data-o]').forEach(b=>b.onclick=()=>{st.pick=b.dataset.o;if(st.pick===f.ans)st.score++;render();});
+  const nx=$('#nx'); if(nx) nx.onclick=()=>{st.i++;st.pick=null;st.opts=null;render();};
+}
+
+/* ───────── 第六關：配對快打 ───────── */
+let timer=null;
+function matchStage(){
+  if(!S.sub){
+    const pool=shuffle(A).slice(0,6);
+    S.sub={pairs:pool,left:shuffle(pool.map(x=>x.id)),right:shuffle(pool.map(x=>x.id)),done:[],pickL:null,miss:0,t0:null,t:0,bad:null};
+  }
+  const st=S.sub, byId=Object.fromEntries(st.pairs.map(x=>[x.id,x]));
+  const finished=st.done.length===st.pairs.length;
+  if(finished&&timer){clearInterval(timer);timer=null;saveBest('m',+st.t.toFixed(1),true);}
+  let html=`<section class="panel"><div class="ptitle"><h2>配對快打</h2><p>每輪六組，計時</p></div>
+   <p class="hint">先點左邊「疑者放不下的」，再點右邊序文接住它的那一招。配錯會記一次失手。</p>
+   <div class="bar"><span class="score" id="clock">用時 ${st.t.toFixed(1)} 秒｜失手 ${st.miss}｜已配 ${st.done.length} / 6</span>${S.best.m!=null?`<span class="score">最佳 ${S.best.m} 秒</span>`:''}</div>
+   <div class="mgrid"><div class="mcol"><h4>疑者放不下</h4>${st.left.map(id=>{const x=byId[id];
+      const c=st.done.includes(id)?'done':(st.pickL===id?'pick':'');
+      return `<button class="mi ${c}" data-l="${id}" ${st.done.includes(id)?'disabled':''}><span class="src">${esc(x.round)}</span>${esc(x.keep)}</button>`;}).join('')}</div>
+   <div class="mcol"><h4>序文的招</h4>${st.right.map(id=>{const x=byId[id];
+      const c=st.done.includes(id)?'done':(st.bad===id?'shake':'');
+      return `<button class="mi ${c}" data-r="${id}" ${st.done.includes(id)?'disabled':''}>${esc(x.name)}</button>`;}).join('')}</div></div>`;
+  if(finished) html+=`<div class="end"><p class="big">${st.t.toFixed(1)} 秒・失手 ${st.miss}</p><p class="hint">六組全配上了。再來一輪會換一批題。</p><div class="bar" style="width:100%"><button class="btn" id="again">再來一輪</button><button class="btn ghost" id="first">回第一關</button></div></div>`;
+  html+=`</section>`;
+  $('#main').innerHTML=html;
+  document.querySelectorAll('.mi[data-l]').forEach(b=>b.onclick=()=>{
+    if(!st.t0){st.t0=performance.now();timer=setInterval(()=>{st.t=(performance.now()-st.t0)/1000;const c=$('#clock');if(c)c.textContent=`用時 ${st.t.toFixed(1)} 秒｜失手 ${st.miss}｜已配 ${st.done.length} / 6`;},100);}
+    st.pickL=b.dataset.l;st.bad=null;render();
+  });
+  document.querySelectorAll('.mi[data-r]').forEach(b=>b.onclick=()=>{
+    if(!st.pickL) return;
+    if(b.dataset.r===st.pickL){st.done.push(st.pickL);st.pickL=null;st.bad=null;}
+    else{st.miss++;st.bad=b.dataset.r;}
+    render();
+  });
+  const ag=$('#again'); if(ag) ag.onclick=()=>{S.sub=null;render();};
+  const fs=$('#first'); if(fs) fs.onclick=()=>go(0);
+  renderNav();
+}
+
+/* ───────── 開場 ───────── */
+function start(d){
+  const h=(location.hash||'').slice(1), hi=STAGES.findIndex(s=>s.k===h);
+  if(hi>=0) S.stage=hi;
+  if(d&&typeof d.stage==='number'){S.stage=d.stage;S.sub=d.sub||null;}
+  renderNav();render();
+}
+window.addEventListener('hashchange',()=>{const hi=STAGES.findIndex(s=>s.k===(location.hash||'').slice(1));if(hi>=0&&hi!==S.stage)go(hi);});
+window.claude?.hot?.snapshot?.(()=>({stage:S.stage,sub:S.stage===5?null:S.sub}));
+window.claude?.hot?.ready ? window.claude.hot.ready(start) : start(window.claude?.hot?.data ?? {});
+</script>
+</body>
+</html>
